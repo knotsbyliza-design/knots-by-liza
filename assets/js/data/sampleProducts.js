@@ -29,7 +29,7 @@ export const SAMPLE_PRODUCTS = [
     category: "Plushie",
     description:
       "Chenille yarn. filled with polyfiber filling",
-    images: ["./images/bunny.png"],
+    images: [ "/assets/js/data/images/bunny.png" ],
      availability: "accepting",
     processingTime: "3–5 business days",
     featured: true,
