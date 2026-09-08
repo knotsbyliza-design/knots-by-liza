@@ -81,25 +81,31 @@ function ensureSeeded() {
 }
 
 /**
- * Adds any product from sampleProducts.js that this browser doesn't have
- * yet (e.g. a new product you added to the file since this browser last
- * visited). Existing products already in localStorage are left completely
- * untouched — this only ever adds, never overwrites or removes.
+ * Keeps every browser's stored products in sync with sampleProducts.js:
+ * - A product in the file but not yet stored → added.
+ * - A product in the file that's already stored → overwritten with the
+ *   file's current version (so price/availability/processingTime edits
+ *   you make in the file reach existing visitors too).
+ * - A product NOT in the file (created purely through the admin panel's
+ *   "+ Add Product" form) → left completely untouched.
  * Safe to call on every page load.
  */
-function reconcileNewProducts() {
+function reconcileWithSampleData() {
   const stored = readJSON(KEYS.PRODUCTS, null);
   if (!Array.isArray(stored)) return; // nothing seeded yet — ensureSeeded handles that case
-  const existingIds = new Set(stored.map((p) => p.id));
-  const newOnes = SAMPLE_PRODUCTS.filter((p) => !existingIds.has(p.id));
-  if (newOnes.length) {
-    writeJSON(KEYS.PRODUCTS, [...stored, ...newOnes]);
-  }
+
+  const storedById = new Map(stored.map((p) => [p.id, p]));
+  SAMPLE_PRODUCTS.forEach((fileProduct) => {
+    storedById.set(fileProduct.id, fileProduct); // the file always wins for its own products
+  });
+
+  writeJSON(KEYS.PRODUCTS, Array.from(storedById.values()));
 }
+
 export function getAllProducts() {
   ensureSeeded();
   migrateLegacyStock();
-  reconcileNewProducts();
+  reconcileWithSampleData();
   return readJSON(KEYS.PRODUCTS, []);
 }
 
