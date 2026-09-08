@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — Knots by Liza</title>
+<meta name="description" content="Complete your order from Knots by Liza with a 50% advance or full advance payment." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<main class="container section--tight">
+  <div class="page-header" style="padding-top:0; text-align:left">
+    <h1>Checkout</h1>
+  </div>
+
+  <div id="checkout-empty" class="empty-state" style="display:none">
+    <h3>Your cart is empty</h3>
+    <p>Add something to your cart before checking out.</p>
+    <a href="shop.html" class="btn btn--primary" style="margin-top:16px">Shop Now</a>
+  </div>
+
+  <form id="checkout-form" class="checkout-layout" novalidate>
+    <div>
+      <h3 style="margin-bottom:18px">Delivery details</h3>
+
+      <div class="form-field" id="field-fullName">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" class="text-input" autocomplete="name" required />
+        <p class="form-error">Please enter your full name.</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field" id="field-phone">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="text-input" autocomplete="tel" required />
+          <p class="form-error">Please enter a valid phone number.</p>
+        </div>
+        <div class="form-field" id="field-whatsapp">
+          <label for="whatsapp">WhatsApp Number <span class="hint">(if different)</span></label>
+          <input type="tel" id="whatsapp" class="text-input" autocomplete="tel" />
+        </div>
+      </div>
+
+      <div class="form-field" id="field-email">
+        <label for="email">Email <span class="hint">(optional)</span></label>
+        <input type="email" id="email" class="text-input" autocomplete="email" />
+        <p class="form-error">Please enter a valid email address.</p>
+      </div>
+
+      <div class="form-field" id="field-address">
+        <label for="address">Complete Delivery Address</label>
+        <textarea id="address" class="text-input" rows="3" required></textarea>
+        <p class="form-error">Please enter your delivery address.</p>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field" id="field-city">
+          <label for="city">City</label>
+          <input type="text" id="city" class="text-input" required />
+          <p class="form-error">Please enter your city.</p>
+        </div>
+        <div class="form-field" id="field-postalCode">
+          <label for="postalCode">Postal Code <span class="hint">(optional)</span></label>
+          <input type="text" id="postalCode" class="text-input" />
+        </div>
+      </div>
+
+       <h3 style="margin:28px 0 14px">Payment method</h3>
+      <div class="payment-options" id="payment-options">
+        <label class="payment-option selected" data-value="50% Advance Payment">
+          <input type="radio" name="payment" value="50% Advance Payment" checked style="margin-top:3px" />
+          <div>
+            <p class="payment-option__title">50% Advance Payment</p>
+            <p class="payment-option__desc">Pay half upfront to start your order — I'll contact you on WhatsApp with payment details, balance due before delivery.</p>
+          </div>
+        </label>
+        <label class="payment-option" data-value="Full Advance Payment">
+          <input type="radio" name="payment" value="Full Advance Payment" style="margin-top:3px" />
+          <div>
+            <p class="payment-option__title">Full Advance Payment</p>
+            <p class="payment-option__desc">Pay the full amount upfront — I'll contact you on WhatsApp with payment details.</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <aside class="summary-card">
+      <h3 style="margin-bottom:16px">Order Summary</h3>
+      <div id="checkout-items"></div>
+      <div class="summary-row" style="margin-top:14px"><span>Subtotal</span><span id="checkout-subtotal"></span></div>
+      <div class="summary-row"><span>Delivery</span><span id="checkout-delivery"></span></div>
+      <div class="summary-row summary-row--total"><span>Total</span><span id="checkout-total"></span></div>
+      <button type="submit" class="btn btn--primary btn--block" style="margin-top:18px" id="place-order-btn">Place Order</button>
+      <p class="summary-note">You'll be asked to confirm your order details on WhatsApp after placing it.</p>
+    </aside>
+  </form>
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module" src="assets/js/pages/checkout.js"></script>
+</body>
+</html>

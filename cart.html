@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Cart — Knots by Liza</title>
+<meta name="description" content="Review your cart of handmade crochet items before checkout." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<main class="container section--tight">
+  <div class="page-header" style="padding-top:0; text-align:left">
+    <h1>Your Cart</h1>
+  </div>
+
+  <div id="cart-empty" class="empty-state" style="display:none">
+    <h3>Your cart is empty</h3>
+    <p>Looks like you haven't added anything yet.</p>
+    <a href="shop.html" class="btn btn--primary" style="margin-top:16px">Continue Shopping</a>
+  </div>
+
+  <div id="cart-layout" class="cart-layout" style="display:none">
+    <div>
+      <div id="cart-lines"></div>
+      <a href="shop.html" class="btn btn--ghost" style="margin-top:20px">Continue Shopping</a>
+    </div>
+
+    <aside class="summary-card">
+      <h3 style="margin-bottom:16px">Order Summary</h3>
+      <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal"></span></div>
+      <div class="summary-row"><span>Delivery</span><span id="summary-delivery"></span></div>
+      <div class="summary-row summary-row--total"><span>Total</span><span id="summary-total"></span></div>
+      <a href="checkout.html" class="btn btn--primary btn--block" style="margin-top:16px">Proceed to Checkout</a>
+      <p class="summary-note" id="free-delivery-note"></p>
+    </aside>
+  </div>
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module" src="assets/js/pages/cart.js"></script>
+</body>
+</html>

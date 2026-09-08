@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard — Knots by Liza</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<div id="admin-login-root"></div>
+<div class="admin-shell" id="admin-content" style="display:none">
+  <div id="admin-sidebar-root"></div>
+  <main class="admin-main" id="admin-main">
+    <div class="admin-topbar">
+      <h1 style="margin:0">Dashboard</h1>
+    </div>
+    <div class="note-box">
+      This dashboard reads data stored in this browser's localStorage only. It is not connected to a
+      cloud database — see the limitations note in the project README.
+    </div>
+    <div class="stat-grid" id="stat-grid"></div>
+    <h3 style="margin-bottom:14px">Recent Orders</h3>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="recent-orders-table"></table>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="../assets/js/pages/admin-dashboard.js"></script>
+</body>
+</html>

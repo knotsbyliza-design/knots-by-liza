@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us — Knots by Liza</title>
+<meta name="description" content="Learn about Knots by Liza, a handmade crochet studio focused on craftsmanship, custom orders and thoughtful gifts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<main>
+  <div class="page-header container">
+    <h1>About Knots by Liza</h1>
+  </div>
+
+  <section class="section container">
+    <div class="two-col">
+      <div class="hero__art" aria-hidden="true">
+        <svg width="320" height="320" viewBox="0 0 200 200"><rect width="200" height="200" rx="24" fill="#F7F2FB"/><circle cx="100" cy="100" r="42" fill="none" stroke="#7C5FA6" stroke-width="4"/><circle cx="100" cy="100" r="26" fill="none" stroke="#7C5FA6" stroke-width="3"/><circle cx="100" cy="100" r="10" fill="none" stroke="#7C5FA6" stroke-width="3"/></svg>
+      </div>
+      <div>
+        <h2>Handmade, start to finish</h2>
+        <p style="color:var(--ink-muted)">Hi, I'm Liza , the idea and the hands behind Knots by Liza. What started with a love for crochet became this little business, where I get to turn simple strands of yarn into pieces made especially for you. Every bag, flower, plushie, accessory, or little creation is handmade by me. </p>
+        <p style="color:var(--ink-muted)">I believe the little details matter. From choosing colours and keeping the stitches neat to adding those final finishing touches, I put care into every piece I make.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lavender">
+    <div class="container">
+      <div class="section-heading section-heading--center">
+        <h2>What matters to me</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Craftsmanship</h3>
+          <p>Every piece is carefully finished before it makes its way to you.</p>
+        </div>
+        <div class="feature">
+          <h3>Attention to detail</h3>
+          <p>From stitch tension to clean finishing, the small things are where handmade quality shows.</p>
+        </div>
+        <div class="feature">
+          <h3>A personal touch</h3>
+          <p>Because every piece is made by me, your order gets the time and attention it deserves.</p>
+        </div>
+        <div class="feature">
+          <h3>Custom orders</h3>
+          <p>Have a colour, size or idea in mind? I'd love to talk it through with you on WhatsApp or Instagram.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" style="text-align:center">
+    <h2>Looking for something unique?</h2>
+    <p style="color:var(--ink-muted); max-width:60ch; margin: 0 auto 20px"></p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="shop.html" class="btn btn--primary">Shop Now</a>
+      <a href="contact.html" class="btn btn--ghost">Contact me</a>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module">
+  import { renderNavbar } from "./assets/js/components/navbar.js";
+  import { renderFooter } from "./assets/js/components/footer.js";
+  renderNavbar("", "about");
+  renderFooter("");
+</script>
+</body>
+</html>

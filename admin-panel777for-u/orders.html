@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manage Orders — Knots by Liza Admin</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+
+<div id="admin-login-root"></div>
+<div class="admin-shell" id="admin-content" style="display:none">
+  <div id="admin-sidebar-root"></div>
+  <main class="admin-main" id="admin-main">
+    <div class="admin-topbar">
+      <h1 style="margin:0">Orders</h1>
+    </div>
+    <div class="note-box">
+      Orders are stored locally in this browser (localStorage), not a shared database. See the README for details.
+    </div>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="orders-table"></table>
+    </div>
+  </main>
+</div>
+
+<div id="order-modal-root"></div>
+
+<script type="module" src="../assets/js/pages/admin-orders.js"></script>
+</body>
+</html>

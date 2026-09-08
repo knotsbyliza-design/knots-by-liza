@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop All Products — Knots by Liza</title>
+<meta name="description" content="Browse handmade crochet bags, flowers, keychains, plushies, accessories, home decor and gifts from Knots by Liza." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<main>
+  <div class="page-header container">
+    <h1>Shop All</h1>
+    <p>Every handmade piece, in one place. Filter by category, price or search for something specific.</p>
+  </div>
+
+  <div class="section section--tight container">
+    <div class="shop-layout">
+      <aside class="filters" id="categories">
+        <h3>Filters</h3>
+        <div class="filters__group">
+          <span class="filters__group-label">Category</span>
+          <div id="filter-categories"></div>
+        </div>
+        <div class="filters__group">
+          <span class="filters__group-label">Price</span>
+          <div class="filters__price-row">
+            <input type="number" min="0" class="text-input" id="filter-min-price" placeholder="Min" />
+            <input type="number" min="0" class="text-input" id="filter-max-price" placeholder="Max" />
+          </div>
+        </div>
+
+        
+
+        <button class="btn btn--ghost btn--block btn--small" id="clear-filters">Clear filters</button>
+      </aside>
+
+      <div>
+        <div class="shop-toolbar">
+          <label class="search-input">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+            <input type="text" id="search-input" placeholder="Search products..." aria-label="Search products" />
+          </label>
+          <select class="select-input" id="sort-select" style="max-width:200px" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+
+        <p id="result-count" style="color:var(--ink-muted); font-size:0.9rem; margin-bottom:16px;"></p>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" style="display:none">
+          <h3>No products found</h3>
+          <p>Try clearing your filters or searching for something else.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="footer-root"></div>
+
+<script type="module" src="assets/js/pages/shop.js"></script>
+</body>
+</html>
