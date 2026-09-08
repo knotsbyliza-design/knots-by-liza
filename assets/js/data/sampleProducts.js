@@ -22,20 +22,20 @@ function img(category, seed) {
 
 export const SAMPLE_PRODUCTS = [
   {
-    id: "sample-001",
-    sku: "KBL-BAG-001",
-    name: "Lavender Fields Tote Bag",
-    price: 3200,
-    category: "bags",
+    id: "Bunny-001",
+    sku: "KBL-PLUSHIES-001",
+    name: "Bunny Plushie",
+    price: 3000,
+    category: "Plushie",
     description:
-      "A sturdy everyday tote crocheted in a soft cotton blend, with reinforced handles and a roomy interior. Perfect for market runs or as a stylish everyday carry.",
-    images: [img("bags", 0), img("bags", 1)],
+      "Chenille yarn. filled with polyfiber filling",
+    images: ["./images/bunny.png"],
      availability: "accepting",
-    processingTime: "5–7 business days",
+    processingTime: "3–5 business days",
     featured: true,
     isNew: false,
     variations: {
-      colour: ["Lavender", "White", "Pink"],
+      colour: ["custom"],
     },
   },
   {
