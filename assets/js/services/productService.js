@@ -80,9 +80,26 @@ function ensureSeeded() {
   }
 }
 
+/**
+ * Adds any product from sampleProducts.js that this browser doesn't have
+ * yet (e.g. a new product you added to the file since this browser last
+ * visited). Existing products already in localStorage are left completely
+ * untouched — this only ever adds, never overwrites or removes.
+ * Safe to call on every page load.
+ */
+function reconcileNewProducts() {
+  const stored = readJSON(KEYS.PRODUCTS, null);
+  if (!Array.isArray(stored)) return; // nothing seeded yet — ensureSeeded handles that case
+  const existingIds = new Set(stored.map((p) => p.id));
+  const newOnes = SAMPLE_PRODUCTS.filter((p) => !existingIds.has(p.id));
+  if (newOnes.length) {
+    writeJSON(KEYS.PRODUCTS, [...stored, ...newOnes]);
+  }
+}
 export function getAllProducts() {
   ensureSeeded();
   migrateLegacyStock();
+  reconcileNewProducts();
   return readJSON(KEYS.PRODUCTS, []);
 }
 
