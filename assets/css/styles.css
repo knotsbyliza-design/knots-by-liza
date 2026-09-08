@@ -238,12 +238,12 @@ p { margin: 0 0 1em; }
 
 /* ---------- Filters / shop toolbar ---------- */
 .shop-layout { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
-@media (max-width: 900px) {
-  .shop-layout { grid-template-columns: 1fr; }
-  .filters { position: static; top: auto; }
-}
+@media (max-width: 900px) { .shop-layout { grid-template-columns: 1fr; } }
 
 .filters { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 22px; position: sticky; top: 90px; }
+@media (max-width: 900px) { 
+  .filters { position: static; top: auto; }
+}
 .filters h3 { font-size: 0.95rem; margin-bottom: 14px; }
 .filters__group { margin-bottom: 22px; }
 .filters__group:last-child { margin-bottom: 0; }
