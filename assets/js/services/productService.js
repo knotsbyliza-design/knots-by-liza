@@ -41,6 +41,46 @@ export function getProcessingTime(product) {
   return (product && product.processingTime) || CONFIG.DEFAULT_PROCESSING_TIME;
 }
 
+/**
+ * ============================================================
+ *  VARIATION PRICING (optional, opt-in per product)
+ * ============================================================
+ *  A variation option is either a plain string (no price effect —
+ *  e.g. colour swatches) or an object { value, price } when picking
+ *  it should change the product's price (e.g. clothing sizes).
+ *  Both forms can be mixed across different variation groups on the
+ *  same product — colour can stay a plain list while size carries
+ *  its own prices, for example.
+ */
+export function normalizeVariationOptions(options) {
+  return (options || []).map((opt) => (typeof opt === "string" ? { value: opt, price: null } : opt));
+}
+
+export function hasPriceVariations(product) {
+  const variations = product?.variations || {};
+  return Object.values(variations).some((options) =>
+    normalizeVariationOptions(options).some((opt) => typeof opt.price === "number")
+  );
+}
+
+/**
+ * The lowest price across any price-carrying variation group, used for
+ * the "From Rs. X" label on product cards. Falls back to the product's
+ * own price if it has no price-affecting variations.
+ */
+export function getStartingPrice(product) {
+  if (!hasPriceVariations(product)) return product.price;
+  let lowest = null;
+  Object.values(product.variations).forEach((options) => {
+    normalizeVariationOptions(options).forEach((opt) => {
+      if (typeof opt.price === "number" && (lowest === null || opt.price < lowest)) {
+        lowest = opt.price;
+      }
+    });
+  });
+  return lowest ?? product.price;
+}
+
 const AVAILABILITY_MIGRATION_KEY = "kbl_products_availability_migrated";
 
 /**

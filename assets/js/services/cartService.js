@@ -43,7 +43,7 @@ export function getCartTotals(deliveryFee, freeDeliveryThreshold) {
  * Adds a product to the cart, clamped to available stock.
  * Returns { ok, reason } so the UI can show a friendly message.
  */
-export function addToCart(productId, variation = {}, qty = 1) {
+export function addToCart(productId, variation = {}, qty = 1, priceOverride = null) {
   const product = getProductById(productId);
   if (!product) return { ok: false, reason: "not-found" };
   if (!canOrder(product)) return { ok: false, reason: "not-accepting" };
@@ -57,13 +57,15 @@ export function addToCart(productId, variation = {}, qty = 1) {
 
   if (nextQty === currentQty) return { ok: false, reason: "max-qty" };
 
+  const price = typeof priceOverride === "number" ? priceOverride : product.price;
+
   if (existing) {
     existing.qty = nextQty;
   } else {
     lines.push({
       productId,
       name: product.name,
-      price: product.price,
+      price,
       image: (product.images && product.images[0]) || "",
       category: product.category,
       processingTime: product.processingTime,

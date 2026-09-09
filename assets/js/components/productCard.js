@@ -1,6 +1,6 @@
 import { formatPrice } from "../utils/currency.js";
 import { getCategoryName } from "../data/categories.js";
-import { canOrder, getAvailabilityBadge, getProcessingTime } from "../services/productService.js";
+import { canOrder, getAvailabilityBadge, getProcessingTime, hasPriceVariations, getStartingPrice } from "../services/productService.js";
 import { addToCart } from "../services/cartService.js";
 import { showToast } from "./toast.js";
 
@@ -11,6 +11,7 @@ import { showToast } from "./toast.js";
  */
 export function productCardHTML(product, base = "") {
   const orderable = canOrder(product);
+  const priced = hasPriceVariations(product);
   const availabilityBadge = getAvailabilityBadge(product); // null | "Longer Wait" | "Not Accepting Orders"
   const badge = product.isNew
     ? '<span class="badge badge--new">New</span>'
@@ -19,6 +20,17 @@ export function productCardHTML(product, base = "") {
     : availabilityBadge === "Longer Wait"
     ? '<span class="badge badge--limited">Longer Wait</span>'
     : "";
+
+  const priceLabel = priced ? `From ${formatPrice(getStartingPrice(product))}` : formatPrice(product.price);
+
+  const actionsHTML = priced
+    ? `<a href="${base}product.html?id=${product.id}" class="btn btn--primary btn--small" style="flex:1">View Details</a>`
+    : `
+        <a href="${base}product.html?id=${product.id}" class="btn btn--ghost btn--small">View Details</a>
+        <button class="btn btn--primary btn--small js-add-to-cart" data-product-id="${product.id}" ${orderable ? "" : "disabled"}>
+          ${orderable ? "Add to Cart" : "Not Accepting Orders"}
+        </button>
+      `;
 
   return `
     <article class="product-card" data-product-id="${product.id}">
@@ -30,13 +42,10 @@ export function productCardHTML(product, base = "") {
         <p class="product-card__category">${getCategoryName(product.category)}</p>
         <a href="${base}product.html?id=${product.id}" class="product-card__name">${escapeHTML(product.name)}</a>
         <p class="product-card__desc">${escapeHTML(truncate(product.description, 70))}</p>
-        <p class="product-card__price">${formatPrice(product.price)}</p>
+        <p class="product-card__price">${priceLabel}</p>
         ${orderable ? `<p class="product-card__processing">Ready in ${escapeHTML(getProcessingTime(product))}</p>` : ""}
         <div class="product-card__actions">
-          <a href="${base}product.html?id=${product.id}" class="btn btn--ghost btn--small">View Details</a>
-          <button class="btn btn--primary btn--small js-add-to-cart" data-product-id="${product.id}" ${orderable ? "" : "disabled"}>
-            ${orderable ? "Add to Cart" : "Not Accepting Orders"}
-          </button>
+          ${actionsHTML}
         </div>
       </div>
     </article>

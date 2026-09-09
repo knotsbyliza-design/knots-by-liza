@@ -1,7 +1,7 @@
 import { renderNavbar } from "../components/navbar.js";
 import { renderFooter } from "../components/footer.js";
 import { productCardHTML, bindAddToCartButtons, escapeHTML } from "../components/productCard.js";
-import { getProductById, getRelatedProducts, canOrder, getAvailabilityLabel, getProcessingTime } from "../services/productService.js";
+import { getProductById, getRelatedProducts, canOrder, getAvailabilityLabel, getProcessingTime, normalizeVariationOptions } from "../services/productService.js";
 import { addToCart } from "../services/cartService.js";
 import { formatPrice } from "../utils/currency.js";
 import { getCategoryName } from "../data/categories.js";
@@ -33,6 +33,27 @@ if (!product) {
 function renderProduct(p) {
   const orderable = canOrder(p);
   const variationKeys = Object.keys(p.variations || {}).filter((k) => p.variations[k] && p.variations[k].length);
+
+  function resolvedPriceFor(selections) {
+    let resolved = null;
+    variationKeys.forEach((key) => {
+      const options = normalizeVariationOptions(p.variations[key]);
+      const match = options.find((o) => o.value === selections[key]);
+      if (match && typeof match.price === "number") resolved = match.price;
+    });
+    return resolved;
+  }
+
+  function defaultSelections() {
+    const selections = {};
+    variationKeys.forEach((key) => {
+      const options = normalizeVariationOptions(p.variations[key]);
+      if (options.length) selections[key] = options[0].value;
+    });
+    return selections;
+  }
+
+  const initialDisplayedPrice = resolvedPriceFor(defaultSelections()) ?? p.price;
   root.innerHTML = `
     <div class="product-detail">
       <div>
@@ -51,7 +72,7 @@ function renderProduct(p) {
       <div>
         <p class="product-detail__category">${getCategoryName(p.category)}</p>
         <h1 class="product-detail__title">${escapeHTML(p.name)}</h1>
-        <p class="product-detail__price">${formatPrice(p.price)}</p>
+        <p class="product-detail__price" id="detail-price">${formatPrice(initialDisplayedPrice)}</p>
 
                 <p class="product-detail__stock ${availabilityClass(p)}">${getAvailabilityLabel(p)}</p>
         ${orderable ? `<p class="product-detail__processing">Estimated processing time: ${escapeHTML(getProcessingTime(p))}</p>` : ""}
@@ -62,10 +83,10 @@ function renderProduct(p) {
             <div class="variation-group" data-variation-key="${key}">
               <span class="variation-group__label">${capitalize(key)}</span>
               <div class="variation-options">
-                ${p.variations[key]
+                                ${normalizeVariationOptions(p.variations[key])
                   .map(
-                    (val, i) =>
-                      `<button type="button" class="variation-chip ${i === 0 ? "selected" : ""}" data-value="${escapeHTML(val)}">${escapeHTML(val)}</button>`
+                    (opt, i) =>
+                      `<button type="button" class="variation-chip ${i === 0 ? "selected" : ""}" data-value="${escapeHTML(opt.value)}">${escapeHTML(opt.value)}${typeof opt.price === "number" ? ` — ${formatPrice(opt.price)}` : ""}</button>`
                   )
                   .join("")}
               </div>
@@ -103,12 +124,13 @@ function renderProduct(p) {
     });
   });
 
-  // Variation chips
+   // Variation chips
   root.querySelectorAll(".variation-group").forEach((group) => {
     group.querySelectorAll(".variation-chip").forEach((chip) => {
       chip.addEventListener("click", () => {
         group.querySelectorAll(".variation-chip").forEach((c) => c.classList.remove("selected"));
         chip.classList.add("selected");
+        updatePriceDisplay();
       });
     });
   });
@@ -125,7 +147,7 @@ function renderProduct(p) {
     qtyInput.value = Math.max(1, Math.min(CONFIG.MAX_QTY_PER_LINE, Number(qtyInput.value) || 1));
   });
 
-  function getSelectedVariation() {
+    function getSelectedVariation() {
     const variation = {};
     root.querySelectorAll(".variation-group").forEach((group) => {
       const key = group.dataset.variationKey;
@@ -135,21 +157,30 @@ function renderProduct(p) {
     return variation;
   }
 
-    root.querySelector("#add-to-cart-btn")?.addEventListener("click", () => {
+  function updatePriceDisplay() {
+    const resolved = resolvedPriceFor(getSelectedVariation());
+    document.getElementById("detail-price").textContent = formatPrice(resolved ?? p.price);
+  }
+
+      root.querySelector("#add-to-cart-btn")?.addEventListener("click", () => {
     const qty = Number(qtyInput.value) || 1;
-    const result = addToCart(p.id, getSelectedVariation(), qty);
+    const variation = getSelectedVariation();
+    const resolvedPrice = resolvedPriceFor(variation);
+    const result = addToCart(p.id, variation, qty, resolvedPrice);
     if (result.ok) {
       showToast("Added to cart 💜", "success");
     } else if (result.reason === "max-qty") {
       showToast(`You've reached the max quantity for this item.`, "error");
     } else {
-      showToast("Sorry, I am not accepting orders for that item right now.", "error");
+      showToast("Sorry, we're not accepting orders for that item right now.", "error");
     }
   });
 
   root.querySelector("#buy-now-btn")?.addEventListener("click", () => {
     const qty = Number(qtyInput.value) || 1;
-    const result = addToCart(p.id, getSelectedVariation(), qty);
+    const variation = getSelectedVariation();
+    const resolvedPrice = resolvedPriceFor(variation);
+    const result = addToCart(p.id, variation, qty, resolvedPrice);
     if (result.ok) {
       location.href = "cart.html";
     } else {

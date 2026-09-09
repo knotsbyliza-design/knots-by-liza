@@ -22,7 +22,7 @@ function img(category, seed) {
 
 export const SAMPLE_PRODUCTS = [
  
-  // -----------Keychains---------------- 
+  // -----------KEYCHAINS---------------- 
     {
     
     id: "kbl-key-001",
@@ -249,4 +249,56 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
+
+// ---------- CLOTHING --------------
+
+  {
+    id: "kbl-clo-001",
+    sku: "KBL-CLO-001",
+    name: "Mikasa Scarf",
+    price: 800,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/"],
+    availability: "accepting",
+    processingTime: "3-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {},
+  },
+  {
+    id: "kbl-clo-002",
+    sku: "KBL-CLO-002",
+    name: "Cardigan",
+    price: 7000,
+    category: "clothing",
+    description: "A handmade crochet cardigan available in three sizes. Small is suitable for teens, Medium is suitable for adults, and Large (XL) is a roomier size.",
+    images: ["/assets/js/data/images/"],
+    availability: "accepting",
+    processingTime: "10-12 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      size: [
+        { value: "Small", price: 5000 },
+        { value: "Medium", price: 7000 },
+        { value: "Large (XL)", price: 8000 },
+      ],
+    },
+  },
+  {
+    id: "kbl-clo-003",
+    sku: "KBL-CLO-003",
+    name: "Spider Web Bandana",
+    price: 1300,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: { colour: ["Maroon", "Black", "White"] },
+  },
+
 ];
