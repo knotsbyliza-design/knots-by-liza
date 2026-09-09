@@ -620,11 +620,11 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "3-5 business days",
     featured: false,
     isNew: false,
-
+  },
 
     //--------------HAND ACCESSORIES ----------
 
-        {
+  {
     id: "kbl-hnd-001",
     sku: "KBL-HND-001",
     name: "Center Rose Gajra Pair - Small",
