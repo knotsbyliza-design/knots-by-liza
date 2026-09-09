@@ -11,9 +11,9 @@ export const CATEGORIES = [
   { slug: "hairaccessories", name: "Hair Accessories", blurb: "Clips, scrunchies & more" },
   { slug: "handaccessories", name: "Hand Accessories", blurb: "Gloves, fingerless gloves, wrist accessories, gajras etc." },
   { slug: "home-decor", name: "Home Decor", blurb: "Cosy pieces for your space" },
-  { slug: "Tech-Covers", name: "Tech Covers", blurb: "Mobile covers + laptop covers" },
-  { slug: "Clothing", name: "Clothing", blurb: "Dresses, cardigans, mufflers etc" },
-  { slug: "Baby Collection", name: "Baby Collection", blurb: "Baby sandals, baby dresses, baby bundles, etc." },  
+  { slug: "tech-covers", name: "Tech Covers", blurb: "Mobile covers + laptop covers" },
+  { slug: "clothing", name: "Clothing", blurb: "Dresses, cardigans, mufflers etc" },
+  { slug: "baby-collection", name: "Baby Collection", blurb: "Baby sandals, baby dresses, baby bundles, etc." },,  
   { slug: "new-arrivals", name: "New Arrivals", blurb: "Fresh off the hook" },
 ];
 
