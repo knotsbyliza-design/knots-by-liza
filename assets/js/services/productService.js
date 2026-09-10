@@ -1,11 +1,9 @@
-import { readJSON, writeJSON, KEYS } from "./storage.js";
 import { SAMPLE_PRODUCTS } from "../data/sampleProducts.js";
 import { CONFIG } from "../config.js";
 
 /**
- * Seeds localStorage with sample products on first run only.
- * Safe to call on every page load — it's a no-op after the first time.
- */
+ * ============================================================
+ *  AVAILABILITY (made-to-order capacity, not stock count)
 
 /**
  * ============================================================
@@ -83,74 +81,16 @@ export function getStartingPrice(product) {
   return lowest ?? product.price;
 }
 
-const AVAILABILITY_MIGRATION_KEY = "kbl_products_availability_migrated";
-
 /**
- * One-time migration: converts any product still using the old numeric
- * `stock` field into the new `availability` / `processingTime` fields.
- * Safe to call on every page load — it's a no-op after the first time,
- * and it never touches products that already have `availability` set.
+ * The product catalogue is read directly from sampleProducts.js on every
+ * call — nothing about it is cached in localStorage. This means any
+ * addition, edit, or deletion you make in that file (then redeploy)
+ * reaches every visitor immediately, old and new, with no stale copies
+ * left behind in anyone's browser.
  */
-function migrateLegacyStock() {
-  if (readJSON(AVAILABILITY_MIGRATION_KEY, false)) return;
-
-  const products = readJSON(KEYS.PRODUCTS, null);
-  if (Array.isArray(products)) {
-    let changed = false;
-    const migrated = products.map((p) => {
-      if (p.availability) return p; // already on the new system
-      changed = true;
-      const { stock, ...rest } = p;
-      return {
-        ...rest,
-        availability: Number(stock) > 0 ? "accepting" : "paused",
-        processingTime: p.processingTime || CONFIG.DEFAULT_PROCESSING_TIME,
-      };
-    });
-    if (changed) writeJSON(KEYS.PRODUCTS, migrated);
-  }
-
-  writeJSON(AVAILABILITY_MIGRATION_KEY, true);
-}
-
-
-function ensureSeeded() {
-  const seeded = readJSON(KEYS.PRODUCTS_SEEDED, false);
-  if (!seeded) {
-    writeJSON(KEYS.PRODUCTS, SAMPLE_PRODUCTS);
-    writeJSON(KEYS.PRODUCTS_SEEDED, true);
-  }
-}
-
-/**
- * Keeps every browser's stored products in sync with sampleProducts.js:
- * - A product in the file but not yet stored → added.
- * - A product in the file that's already stored → overwritten with the
- *   file's current version (so price/availability/processingTime edits
- *   you make in the file reach existing visitors too).
- * - A product NOT in the file (created purely through the admin panel's
- *   "+ Add Product" form) → left completely untouched.
- * Safe to call on every page load.
- */
-function reconcileWithSampleData() {
-  const stored = readJSON(KEYS.PRODUCTS, null);
-  if (!Array.isArray(stored)) return; // nothing seeded yet — ensureSeeded handles that case
-
-  const storedById = new Map(stored.map((p) => [p.id, p]));
-  SAMPLE_PRODUCTS.forEach((fileProduct) => {
-    storedById.set(fileProduct.id, fileProduct); // the file always wins for its own products
-  });
-
-  writeJSON(KEYS.PRODUCTS, Array.from(storedById.values()));
-}
-
 export function getAllProducts() {
-  ensureSeeded();
-  migrateLegacyStock();
-  reconcileWithSampleData();
-  return readJSON(KEYS.PRODUCTS, []);
+  return SAMPLE_PRODUCTS;
 }
-
 export function getProductById(id) {
   return getAllProducts().find((p) => p.id === id) || null;
 }
@@ -161,56 +101,6 @@ export function getRelatedProducts(product, limit = 4) {
     .slice(0, limit);
 }
 
-export function saveAllProducts(products) {
-  writeJSON(KEYS.PRODUCTS, products);
-}
-
-function generateId() {
-  return "p-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 7);
-}
-
-export function createProduct(data) {
-  const products = getAllProducts();
-  const product = {
-    id: generateId(),
-    sku: data.sku || "",
-    name: data.name || "Untitled product",
-    price: Number(data.price) || 0,
-    category: data.category || "gifts",
-    description: data.description || "",
-     images: data.images && data.images.length ? data.images : [],
-    availability: data.availability || "accepting",
-    processingTime: data.processingTime || CONFIG.DEFAULT_PROCESSING_TIME,
-    featured: !!data.featured,
-    isNew: !!data.isNew,
-    variations: data.variations || {},
-  };
-  products.push(product);
-  saveAllProducts(products);
-  return product;
-}
-
-export function updateProduct(id, updates) {
-  const products = getAllProducts();
-  const idx = products.findIndex((p) => p.id === id);
-  if (idx === -1) return null;
-  products[idx] = { ...products[idx], ...updates };
-  saveAllProducts(products);
-  return products[idx];
-}
-
-export function deleteProduct(id) {
-  const products = getAllProducts().filter((p) => p.id !== id);
-  saveAllProducts(products);
-}
-
-export function setAvailability(id, availability) {
-  return updateProduct(id, { availability });
-}
-
-export function setProcessingTime(id, processingTime) {
-  return updateProduct(id, { processingTime: processingTime || CONFIG.DEFAULT_PROCESSING_TIME });
-}
 
 /**
  * Applies search, category, price and availability filters, then sorting.
