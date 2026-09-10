@@ -53,7 +53,9 @@ export function getProcessingTime(product) {
  *  its own prices, for example.
  */
 export function normalizeVariationOptions(options) {
-  return (options || []).map((opt) => (typeof opt === "string" ? { value: opt, price: null } : opt));
+  return (options || [])
+    .filter((opt) => opt != null)
+    .map((opt) => (typeof opt === "string" ? { value: opt, price: null } : opt));
 }
 
 export function hasPriceVariations(product) {
