@@ -73,6 +73,10 @@ p { margin: 0 0 1em; }
   padding: 0 24px;
 }
 
+@media (max-width: 640px) {
+  .container { padding: 0 28px; }
+}
+
 .section { padding: 72px 0; }
 .section--tight { padding: 48px 0; }
 .section--lavender { background: var(--lavender-50); }
