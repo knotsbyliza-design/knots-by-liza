@@ -32,7 +32,7 @@ export const SAMPLE_PRODUCTS = [
     category: "keychains",
     description: "Available in any color — message us your preference.",
     images: ["/assets/js/data/images/heartkeychain.png"],
-    availability: "limited",
+    availability: "accepting",
     processingTime: "2-3 business days",
     featured: false,
     isNew: false,
