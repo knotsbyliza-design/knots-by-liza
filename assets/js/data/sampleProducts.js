@@ -303,6 +303,55 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: { colour: ["Maroon", "Black", "White"] },
   },
+
+ {
+    id: "kbl-clo-004",
+    sku: "KBL-CLO-004",
+    name: "Cherry on Top Scarf",
+    price: 2450,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/cherryscarf.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: { },
+    
+  },
+
+ {
+    id: "kbl-clo-005",
+    sku: "KBL-CLO-005",
+    name: "Vintage Cocoa Striped Muffler",
+    price: 2000,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/brownscarf.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: { },
+  },
+
+ {
+    id: "kbl-clo-006",
+    sku: "KBL-CLO-006",
+    name: "Santa’s Helper Striped Scarf",
+    price: 2000,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/whiteredscarf.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: { },
+  },
+
+
+  
 // --------------- BAGS------------------------ 
 
   {
@@ -403,6 +452,27 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
+
+ {
+    id: "kbl-bag-008",
+    sku: "KBL-BAG-008",
+    name: "Bow Bag",
+    price: 2000,
+    category: "bags",
+    description: "It can be in any color, just message me with the color of your choice.",
+    images: ["/assets/js/data/images/bowbag.jpe","/assets/js/data/images/bowbag1.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+    Style: [
+      { Value: "Style 1", price: "2000"},
+      { Value: "Style 2", price: "2200"}
+    ]
+    },
+  },
+
 
 // -------- FLOWERS -----------
 
@@ -548,7 +618,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: true,
-    isNew: true,
+    isNew: false,
     variations: {},
   },
   {
@@ -563,6 +633,21 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "3-5 business days",
     featured: false,
     isNew: false,
+    variations: {},
+  },
+
+   {
+    id: "kbl-plu-004",
+    sku: "KBL-PLU-004",
+    name: "Turtle Plushie",
+    price: 3000,
+    category: "plushies",
+    description: "",
+    images: ["/assets/js/data/images/turtle.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
     variations: {},
   },
 
@@ -1047,17 +1132,17 @@ export const SAMPLE_PRODUCTS = [
     name: "Frock Style 1",
     price: 1500,
     category: "baby-collection",
-    description: "A handmade crochet frock with a waist belt that ties into a bow and ruffled sleeves. Small size is suitable for 0–6 months, Medium for 1 year, and Large for 2 years. Custom color or sizing? Drop me a message for pricing.",
+    description: "A handmade crochet frock with a waist belt that ties into a bow and ruffled sleeves. Custom color or sizing? Drop me a message for pricing.",
     images: ["/assets/js/data/images/frockstyle1.png"],
     availability: "accepting",
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
     variations: {
-      size: [
-        { value: "Small", price: 1500 },
-        { value: "Medium", price: 2000 },
-        { value: "Large", price: 2500 },
+      age: [
+        { value: "0-6 months", price: 1500 },
+        { value: "9-12 months", price: 2000 },
+        { value: "18 months", price: 2500 },
       ],
     },
   },
@@ -1067,17 +1152,17 @@ export const SAMPLE_PRODUCTS = [
     name: "Frock Style 2",
     price: 1700,
     category: "baby-collection",
-    description: "A simple handmade crochet frock decorated with three small flowers at the waistline. Small size is suitable for 0–6 months, Medium for 1 year, and Large for 2 years. Custom color or sizing? Drop me a message for pricing.",
+    description: "A simple handmade crochet frock decorated with three small flowers at the waistline. Custom color or sizing? Drop me a message for pricing.",
     images: ["/assets/js/data/images/frockstyle2.png", "/assets/js/data/images/frock2.jpe"],
     availability: "accepting",
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
     variations: {
-      size: [
-        { value: "Small", price: 1700 },
-        { value: "Medium", price: 2100 },
-        { value: "Large", price: 2500 },
+      age: [
+        { value: "0-6 months", price: 1700 },
+        { value: "9 - 12 months", price: 2100 },
+        { value: "18 months", price: 2500 },
       ],
     },
   },
@@ -1087,17 +1172,17 @@ export const SAMPLE_PRODUCTS = [
     name: "Baby Set 1",
     price: 4000,
     category: "baby-collection",
-    description: "A complete handmade crochet baby set consisting of 1 frock, 1 cap, 1 mitten pair, and 1 boots pair, featuring cute mini sunflower details throughout. Small size is suitable for 0–6 months, Medium for 1 year, and Large for 2 years. Custom color or sizing? Drop me a message for pricing.",
+    description: "A complete handmade crochet baby set consisting of 1 frock, 1 cap, 1 mitten pair, and 1 boots pair, featuring cute mini sunflower details throughout. Custom color or sizing? Drop me a message for pricing.",
     images: ["/assets/js/data/images/babyset1.png"],
     availability: "accepting",
     processingTime: "7–12 business days",
     featured: false,
     isNew: true,
     variations: {
-      size: [
-        { value: "Small", price: 4000 },
-        { value: "Medium", price: 4500 },
-        { value: "Large", price: 5200 },
+      Age: [
+        { value: "0-6 months", price: 4000 },
+        { value: "9-12 months", price: 4500 },
+        { value: "18 months", price: 5200 },
       ],
     },
   },
