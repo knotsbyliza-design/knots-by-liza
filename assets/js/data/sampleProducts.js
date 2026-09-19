@@ -311,7 +311,7 @@ export const SAMPLE_PRODUCTS = [
     price: 2450,
     category: "clothing",
     description: "",
-    images: ["/assets/js/data/images/cherryscarf.jpe"],
+    images: ["/assets/js/data/images/Cherryscarf.jpe"],
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
@@ -351,7 +351,7 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
-  
+
 // --------------- BAGS------------------------ 
 
   {
@@ -460,15 +460,15 @@ export const SAMPLE_PRODUCTS = [
     price: 2000,
     category: "bags",
     description: "It can be in any color, just message me with the color of your choice.",
-    images: ["/assets/js/data/images/bowbag.jpe","/assets/js/data/images/bowbag1.jpe"],
+    images: ["/assets/js/data/images/bowbag.jpe","/assets/js/data/images/bowbag2.jpe"],
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
     isNew: true,
     variations: {
     Style: [
-      { Value: "Style 1", price: "2000"},
-      { Value: "Style 2", price: "2200"}
+      { Value: "Without Tails", price: "2000"},
+      { Value: "With Tails", price: "2200"}
     ]
     },
   },
