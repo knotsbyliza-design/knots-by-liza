@@ -468,7 +468,7 @@ export const SAMPLE_PRODUCTS = [
     variations: {
     Style: [
       { value: "Without Tails", price: "2000"},
-      { value: "With Tails", price: "2200"}
+      { value: "With Tails", price: "2200"},
     ]
     },
 },
