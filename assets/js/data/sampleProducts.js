@@ -467,8 +467,8 @@ export const SAMPLE_PRODUCTS = [
     isNew: true,
     variations: {
     Style: [
-      { value: "Without Tails", price: "2000"},
-      { value: "With Tails", price: "2200"},
+      { value: "Without Tails", price: 2000 },
+      { value: "With Tails", price: 2200 },
     ]
     },
 },
