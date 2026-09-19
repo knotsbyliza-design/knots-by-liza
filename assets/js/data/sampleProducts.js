@@ -806,6 +806,33 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
+
+ {
+    id: "kbl-hac-018",
+    sku: "KBL-HAC-018",
+    name: "Flower String",
+    price: 500,
+    category: "hairaccessories",
+    description: " Small is 15 inches, Medium is 25 inches, Large is 35 inches. If you'd like a different color or size, message me with your choice.",
+    images: ["/assets/js/data/images/Hair.png", "/assets/js/data/images/Hair 1.png"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      size: [
+        { value: "Small", price: 500 },
+        { value: "Medium", price: 800 },
+        { value: "Large", price: 1100 },
+      ],
+    },
+  },
+
+
+
+
+
+
     //--------------HAND ACCESSORIES ----------
 
   {
