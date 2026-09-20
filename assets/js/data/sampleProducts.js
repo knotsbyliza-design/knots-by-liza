@@ -647,7 +647,7 @@ export const SAMPLE_PRODUCTS = [
     price: 3000,
     category: "plushies",
     description: "",
-    images: ["/assets/js/data/images/turtle.jpe"],
+    images: ["/assets/js/data/images/Turtle.jpe"],
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
