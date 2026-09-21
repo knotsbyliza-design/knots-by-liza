@@ -351,6 +351,22 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
+  {
+    id: "kbl-clo-007",
+    sku: "KBL-CLO-007",
+    name: "Shadow Kitty Vest",
+    price: 2900,
+    category: "clothing",
+    description: "Material: Acrylic Yarn. Custom colors are also available.",
+    images: ["/assets/js/data/images/vestgray.jpe"],
+    availability: "accepting",
+    processingTime: "12-15 business days",
+    featured: false,
+    isNew: true,
+    variations: { },
+  },
+
+
 
 // --------------- BAGS------------------------ 
 
@@ -565,20 +581,20 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
- // {
-   // id: "kbl-flw-007",
-   // sku: "KBL-FLW-007",
-   // name: "Wine Glass Rose",
-   // price: 600,
-   // category: "flowers",
-   // description: "",
-    //images: ["/assets/js/data/images/"],
-    //availability: "accepting",
-    //processingTime: "2-3 business days",
-    //featured: false,
-    //isNew: false,
-    //variations: {},
-  //},
+  {
+    id: "kbl-flw-007",
+   sku: "KBL-FLW-007",
+    name: "Velvet Enchanted Rose",
+    price: 800,
+   category: "flowers",
+    description: "Flower is 14 inches long and 4 inches wide. If you want a different length or color, text me with your choice",
+    images: ["/assets/js/data/images/velvetrose1.jpe", "/assets/js/data/images/velvetrose.jpe"],
+    availability: "accepting",
+    processingTime: "2-3 business days",
+    featured: false,
+    isNew: true,
+    variations: {},
+  },
   {
     id: "kbl-flw-008",
     sku: "KBL-FLW-008",

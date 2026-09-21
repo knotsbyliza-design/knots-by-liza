@@ -275,7 +275,7 @@ p { margin: 0 0 1em; }
 .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
 @media (max-width: 860px) { .product-detail { grid-template-columns: 1fr; gap: 30px; } }
 .product-detail__gallery-main { border-radius: var(--radius-lg); overflow: hidden; background: var(--lavender-50); aspect-ratio: 1/1; }
-.product-detail__gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.product-detail__gallery-main img { width: 100%; height: 100%; object-fit: contain; }
 .product-detail__thumbs { display: flex; gap: 10px; margin-top: 12px; }
 .product-detail__thumbs img { width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius-sm); border: 2px solid transparent; cursor: pointer; }
 .product-detail__thumbs img.active { border-color: var(--lavender-500); }
