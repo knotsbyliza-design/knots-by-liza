@@ -358,7 +358,7 @@ export const SAMPLE_PRODUCTS = [
     price: 2900,
     category: "clothing",
     description: "Material: Acrylic Yarn. Custom colors are also available.",
-    images: ["/assets/js/data/images/vestgray.jpe"],
+    images: ["/assets/js/data/images/Vestgray.jpe"],
     availability: "accepting",
     processingTime: "12-15 business days",
     featured: false,
