@@ -355,7 +355,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-007",
     sku: "KBL-CLO-007",
     name: "Shadow Kitty Vest",
-    price: 2900,
+    price: 3200,
     category: "clothing",
     description: "Material: Acrylic Yarn. Custom colors are also available.",
     images: ["/assets/js/data/images/Vestgray.jpe"],
