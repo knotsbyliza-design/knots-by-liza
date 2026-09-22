@@ -560,7 +560,7 @@ export const SAMPLE_PRODUCTS = [
     price: 650,
     category: "flowers",
     description: "",
-    images: ["/assets/js/data/images/1flowerbouquet.jpg", "/assets/js/data/images/2flowerbouquet.jpg"],
+    images: ["/assets/js/data/images/2flowerbouquet.jpg", "/assets/js/data/images/1flowerbouquet.jpg"],
     availability: "accepting",
     processingTime: "2-3 business days",
     featured: false,
