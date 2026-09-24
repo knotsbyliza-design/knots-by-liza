@@ -367,6 +367,45 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
+    {
+    id: "kbl-clo-008",
+    sku: "KBL-CLO-008",
+    name: "The Midnight Flare",
+    price: 7000,
+    category: "clothing",
+    description: "Material: Acrylic Yarn. Custom colors are also available.",
+    images: ["/assets/js/data/images/dress.jpe"],
+    availability: "accepting",
+    processingTime: "15-17 business days",
+    featured: false,
+    isNew: true,
+    variations: { 
+      size:
+      [
+         { value: "Kids", price: 3000 },
+          { value: "Teens", price: 5000 },
+        { value:"Adult size", price: 7000}, 
+      ]
+    },
+  },
+
+{
+    id: "kbl-clo-009",
+    sku: "KBL-CLO-009",
+    name: "Hooded Paw Scarf",
+    price: 2800,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/whiteredscarf.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: { },
+  },
+
+
+
 
 // --------------- BAGS------------------------ 
 
@@ -1268,5 +1307,28 @@ export const SAMPLE_PRODUCTS = [
     featured: false,
     isNew: false,
     variations: {},
+  },
+
+
+  {
+    id: "kbl-bby-008",
+    sku: "KBL-BBY-008",
+    name: "Star Cocoon Wrap",
+    price: 2800,
+    category: "baby-collection",
+    description: "Made with soft acrylic yarn suitable for baby's skin.",
+    images: ["/assets/js/data/images/frockstyle1.png"],
+    availability: "accepting",
+    processingTime: "5–7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      age: [
+        { value: "0-3 Months", price: 2800},
+        { value: "3-6 months", price: 3500 },
+        { value: "6-12 months", price: 4200 },
+        { value: "12-18 months", price: 5000 },
+      ],
+    },
   },
 ];
