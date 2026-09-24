@@ -1317,7 +1317,7 @@ export const SAMPLE_PRODUCTS = [
     price: 2800,
     category: "baby-collection",
     description: "Made with soft acrylic yarn suitable for baby's skin.",
-    images: ["/assets/js/data/images/frockstyle1.png"],
+    images: ["/assets/js/data/images/starbaby.jpe"],
     availability: "accepting",
     processingTime: "5–7 business days",
     featured: false,
