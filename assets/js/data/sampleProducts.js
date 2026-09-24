@@ -315,7 +315,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { },
     
   },
@@ -331,7 +331,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { },
   },
 
@@ -346,7 +346,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { },
   },
 
@@ -396,7 +396,7 @@ export const SAMPLE_PRODUCTS = [
     price: 2800,
     category: "clothing",
     description: "",
-    images: ["/assets/js/data/images/whiteredscarf.jpe"],
+    images: ["/assets/js/data/images/pawscarf.jpe"],
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
@@ -404,7 +404,23 @@ export const SAMPLE_PRODUCTS = [
     variations: { },
   },
 
-
+{
+    id: "kbl-clo-010",
+    sku: "KBL-CLO-010",
+    name: "Spider Web Top",
+    price: 3000,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/swtop.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: { 
+     colour: ["Red", "Black", "white"] 
+      
+    },
+  },
 
 
 // --------------- BAGS------------------------ 
@@ -613,20 +629,21 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
- // {
-  //  id: "kbl-flw-006",
- //   sku: "KBL-FLW-006",
- //   name: "One Sunflower Bouquet",
- //   price: 650,
- //   category: "flowers",
- //   description: "",
- //   images: ["/assets/js/data/images/1flowerbouquet.jpg"],
- //   availability: "accepting",
-//    processingTime: "2-3 business days",
- //   featured: false,
- //   isNew: false,
- //   variations: {},
- // },
+ {
+    id: "kbl-flw-006",
+    sku: "KBL-FLW-006",
+    name: "The Velvet Lily",
+    price: 500,
+    category: "flowers",
+    description: "",
+    images: ["/assets/js/data/images/lily.jpe"],
+    availability: "accepting",
+    processingTime: "2-3 business days",
+   featured: false,
+    isNew: false,
+   variations: {},
+  },
+  
   {
     id: "kbl-flw-007",
    sku: "KBL-FLW-007",
@@ -1243,7 +1260,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "7–12 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
       Age: [
         { value: "0-6 months", price: 4000 },
