@@ -535,7 +535,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
     Style: [
       { value: "Without Tails", price: 2000 },
@@ -1176,7 +1176,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {},
   },
   {
