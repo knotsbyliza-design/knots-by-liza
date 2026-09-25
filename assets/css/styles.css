@@ -364,7 +364,12 @@ p { margin: 0 0 1em; }
   background: var(--ink); color: #fff; padding: 12px 18px; border-radius: var(--radius-sm);
   font-size: 0.9rem; box-shadow: var(--shadow-lift); opacity: 0; transform: translateY(8px);
   transition: opacity 0.25s ease, transform 0.25s ease; max-width: 320px;
+  display: flex; align-items: center; gap: 14px; justify-content: space-between;
 }
+.toast__action {
+  color: #fff; font-weight: 700; text-decoration: underline; white-space: nowrap; flex-shrink: 0;
+}
+.toast__action:hover { opacity: 0.85; }
 .toast--visible { opacity: 1; transform: translateY(0); }
 .toast--success { background: var(--lavender-700); }
 .toast--error { background: var(--error); }

@@ -66,7 +66,7 @@ export function bindAddToCartButtons(container) {
       if (result.ok) {
         btn.classList.add("btn--bounce");
         setTimeout(() => btn.classList.remove("btn--bounce"), 300);
-        showToast("Added to cart 💜", "success");
+                showToast("Added to cart 💜", "success", { label: "View Cart", href: "cart.html" });
             } else if (result.reason === "max-qty") {
         showToast(`You've reached the max quantity for this item.`, "error");
       } else if (result.reason === "not-accepting") {

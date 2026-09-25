@@ -14,17 +14,36 @@ function getContainer() {
 /**
  * Shows a brief toast message. type: "success" | "error" | "info"
  */
-export function showToast(message, type = "success") {
+/**
+ * @param {string} message
+ * @param {string} type "success" | "error" | "info"
+ * @param {{label: string, href: string} | null} action optional clickable
+ *   link shown alongside the message (e.g. "View Cart" → cart.html)
+ */
+export function showToast(message, type = "success", action = null) {
   const stack = getContainer();
   const toast = document.createElement("div");
   toast.className = `toast toast--${type}`;
-  toast.textContent = message;
+
+  const text = document.createElement("span");
+  text.textContent = message;
+  toast.appendChild(text);
+
+  if (action) {
+    const link = document.createElement("a");
+    link.className = "toast__action";
+    link.href = action.href;
+    link.textContent = action.label;
+    toast.appendChild(link);
+  }
+
   stack.appendChild(toast);
 
   requestAnimationFrame(() => toast.classList.add("toast--visible"));
 
+  const duration = action ? 4000 : 2600;
   setTimeout(() => {
     toast.classList.remove("toast--visible");
     setTimeout(() => toast.remove(), 300);
-  }, 2600);
+  }, duration);
 }

@@ -167,8 +167,8 @@ function renderProduct(p) {
     const variation = getSelectedVariation();
     const resolvedPrice = resolvedPriceFor(variation);
     const result = addToCart(p.id, variation, qty, resolvedPrice);
-    if (result.ok) {
-      showToast("Added to cart 💜", "success");
+        if (result.ok) {
+      showToast("Added to cart 💜", "success", { label: "View Cart", href: "cart.html" });
     } else if (result.reason === "max-qty") {
       showToast(`You've reached the max quantity for this item.`, "error");
     } else {
