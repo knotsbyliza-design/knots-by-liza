@@ -422,6 +422,29 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
+  {
+    id: "kbl-clo-011",
+    sku: "KBL-CLO-011",
+    name: "Bloom Vine Cape",
+    price: 5000,
+    category: "clothing",
+    description: "Material: Acrylic Yarn. Custom colors are also available.",
+    images: ["/assets/js/data/images/bloomcape.jpe" , "/assets/js/data/images/bloomcape1.jpe" ],
+    availability: "accepting",
+    processingTime: "12-15 business days",
+    featured: false,
+    isNew: true,
+    variations: { 
+      size:
+      [
+         { value: "Kids", price: 2800 },
+          { value: "Teens", price: 3800 },
+        { value:"Adult size", price: 5000 }, 
+      ]
+    },
+  },
+
+
 
 // --------------- BAGS------------------------ 
 
@@ -979,7 +1002,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-hac-018",
     sku: "KBL-HAC-018",
     name: "Flower String",
-    price: 500,
+    price: 400,
     category: "hairaccessories",
     description: " Small is 15 inches, Medium is 25 inches, Large is 35 inches. If you'd like a different color or size, message me with your choice.",
     images: ["/assets/js/data/images/Hair.png", "/assets/js/data/images/Hair 1.png"],
@@ -989,14 +1012,29 @@ export const SAMPLE_PRODUCTS = [
     isNew: true,
     variations: {
       size: [
-        { value: "Small", price: 500 },
-        { value: "Medium", price: 800 },
-        { value: "Large", price: 1100 },
+        { value: "Small", price: 400 },
+        { value: "Medium", price: 700 },
+        { value: "Large", price: 1000 },
       ],
     },
   },
 
-
+{
+    id: "kbl-hac-019",
+    sku: "KBL-HAC-019",
+    name: "Classic Mesh Bandana",
+    price: 800,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/classicbandana.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
 
 
 

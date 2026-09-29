@@ -14,7 +14,7 @@ export const CATEGORIES = [
   { slug: "tech-covers", name: "Tech Covers", blurb: "Mobile covers + laptop covers" },
   { slug: "clothing", name: "Clothing", blurb: "Dresses, cardigans, mufflers etc" },
   { slug: "baby-collection", name: "Baby Collection", blurb: "Baby sandals, baby dresses, baby bundles, etc." },
-  { slug: "new-arrivals", name: "New Arrivals", blurb: "Fresh off the hook" },
+
 ];
 
 export function getCategoryName(slug) {
