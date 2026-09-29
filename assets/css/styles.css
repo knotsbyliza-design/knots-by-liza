@@ -171,7 +171,7 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }
-  .hero__art { order: -1; }
+  .hero__art { display: none; }
 }
 
 /* ---------- Product grid & cards ---------- */
