@@ -89,7 +89,10 @@ export function getStartingPrice(product) {
  * left behind in anyone's browser.
  */
 export function getAllProducts() {
-  return SAMPLE_PRODUCTS;
+  // Newest-added products (later entries in the file) show first by default,
+  // so a customer revisiting doesn't have to scroll to find what's new.
+  // Uses a copy so the original file/array order is never mutated.
+  return [...SAMPLE_PRODUCTS].reverse();
 }
 export function getProductById(id) {
   return getAllProducts().find((p) => p.id === id) || null;

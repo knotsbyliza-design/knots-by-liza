@@ -959,7 +959,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-hac-015",
     sku: "KBL-HAC-015",
     name: "Sunflower Bandana - Adults",
-    price: 1500,
+    price: 1400,
     category: "hairaccessories",
     description: "If you'd like a different color, message me with the color of your choice.",
     images: ["/assets/js/data/images/sunflwrbandana.jpg"],
@@ -1108,7 +1108,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-hac-024",
     sku: "KBL-HAC-024",
     name: "Daisy Bandana",
-    price: 1500,
+    price: 1400,
     category: "hairaccessories",
     description: "If you'd like a different color, message me with the color of your choice.",
     images: ["/assets/js/data/images/daisybandana.jpe"],
@@ -1120,6 +1120,24 @@ export const SAMPLE_PRODUCTS = [
       color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
   },
+  
+  {
+    id: "kbl-hac-025",
+    sku: "KBL-HAC-025",
+    name: "Kawaii Kitty Beanie",
+    price: 1500,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/daisybandana.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      color: [ "black and white", "brown and white", "gray and black", "purple and white", "pink and white"  ]
+    },
+  },
+
   
     //--------------HAND ACCESSORIES ----------
 
