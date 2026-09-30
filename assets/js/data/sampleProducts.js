@@ -1224,7 +1224,42 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
+ {
+    id: "kbl-hac-029",
+    sku: "KBL-HAC-029",
+    name: "Blossom Wave Headband",
+    price: 600,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/blossomwave.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+    },
+  },
 
+ {
+    id: "kbl-hac-030",
+    sku: "KBL-HAC-030",
+    name: "Sunflower Hair Ties",
+    price: 280,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/flowerhairtie.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      quantity:
+      [  
+        { value: "Set of 3", price: 280},
+        { value: "Set of 5", price: 400}, 
+      ]
+    },
+  },
 
 
     //--------------HAND ACCESSORIES ----------
