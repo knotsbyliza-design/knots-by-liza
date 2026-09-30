@@ -259,7 +259,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-001",
     sku: "KBL-CLO-001",
     name: "Mikasa Scarf",
-    price: 800,
+    price: 1600,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/mikasa.png"],
@@ -441,6 +441,40 @@ export const SAMPLE_PRODUCTS = [
           { value: "Teens", price: 3800 },
         { value:"Adult size", price: 5000 }, 
       ]
+    },
+  },
+
+{
+    id: "kbl-clo-012",
+    sku: "KBL-CLO-012",
+    name: "Earthline Mesh Pullover",
+    price: 2400,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/earthlinemesh.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+  {
+    id: "kbl-clo-012",
+    sku: "KBL-CLO-012",
+    name: "Angel Mesh Cardigan",
+    price: 2500,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/angelmesh.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
     },
   },
 
@@ -1137,6 +1171,60 @@ export const SAMPLE_PRODUCTS = [
       color: [ "black and white", "brown and white", "gray and black", "purple and white", "pink and white"  ]
     },
   },
+
+ {
+    id: "kbl-hac-026",
+    sku: "KBL-HAC-026",
+    name: "Puff Flowers Headband",
+    price: 550,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/puffheadband.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      color: [ "black and white", "brown and cream", "gray and black", "purple and white", "pink and white", "red and black", "purple and black", "green and white"  ]
+    },
+  },
+
+{
+    id: "kbl-hac-027",
+    sku: "KBL-HAC-027",
+    name: "Classic Bow Clip",
+    price: 450,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/cbowclip.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      color: [ "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink" ,"yellow", "random color"  ]
+    },
+  },
+
+
+   {
+    id: "kbl-hac-028",
+    sku: "KBL-HAC-028",
+    name: "Tulip Snap Clips",
+    price: 400,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/tulipsnap.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      color: [ "pink and white", "lavender and white", "baby blue and white", "sage green and cream", "red and green", "butter yellow and white", "brown and cream", "peach and white", "random"  ]
+    },
+  },
+
+
 
 
     //--------------HAND ACCESSORIES ----------
