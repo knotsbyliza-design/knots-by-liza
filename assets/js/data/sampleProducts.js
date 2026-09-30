@@ -1005,7 +1005,7 @@ export const SAMPLE_PRODUCTS = [
     price: 400,
     category: "hairaccessories",
     description: " Small is 15 inches, Medium is 25 inches, Large is 35 inches. If you'd like a different color or size, message me with your choice.",
-    images: ["/assets/js/data/images/Hair.png", "/assets/js/data/images/Hair 1.png"],
+    images: ["/assets/js/data/images/hair.jpeg", "/assets/js/data/images/hair1.jpeg"],
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
@@ -1036,7 +1036,22 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
-
+{
+    id: "kbl-hac-020",
+    sku: "KBL-HAC-020",
+    name: "Floral Vine Bandana",
+    price: 1200,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/flowerbandana.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
 
 
     //--------------HAND ACCESSORIES ----------
