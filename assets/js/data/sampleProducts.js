@@ -1117,7 +1117,7 @@ export const SAMPLE_PRODUCTS = [
     featured: false,
     isNew: true,
     variations: {
-      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+      color: [ "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
   },
   
@@ -1128,7 +1128,7 @@ export const SAMPLE_PRODUCTS = [
     price: 1500,
     category: "hairaccessories",
     description: "If you'd like a different color, message me with the color of your choice.",
-    images: ["/assets/js/data/images/daisybandana.jpe"],
+    images: ["/assets/js/data/images/kittybeanie.jpe"],
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
@@ -1138,7 +1138,7 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
-  
+
     //--------------HAND ACCESSORIES ----------
 
   {
