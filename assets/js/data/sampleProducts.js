@@ -1052,8 +1052,75 @@ export const SAMPLE_PRODUCTS = [
       color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
   },
+{
+    id: "kbl-hac-021",
+    sku: "KBL-HAC-021",
+    name: "Petal Lattice Bandana",
+    price: 1100,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/petallattice.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
+
+{
+    id: "kbl-hac-022",
+    sku: "KBL-HAC-022",
+    name: "Clover Eyelet Bandana",
+    price: 1000,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/bandanaa.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
 
 
+  {
+    id: "kbl-hac-023",
+    sku: "KBL-HAC-023",
+    name: "X-Twist Headband",
+    price: 650,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/xtwist.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
+
+{
+    id: "kbl-hac-024",
+    sku: "KBL-HAC-024",
+    name: "Daisy Bandana",
+    price: 1500,
+    category: "hairaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/daisybandana.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
+    },
+  },
+  
     //--------------HAND ACCESSORIES ----------
 
   {
