@@ -1051,6 +1051,20 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
+  {
+    id: "kbl-bag-018",
+    sku: "KBL-BAG-018",
+    name: "Tulip Garden Pouch",
+    price: 2000,
+    category: "bags",
+    description: "",
+    images: ["/assets/js/data/images/makeupbag.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {},
+  },
 
 
 
@@ -1160,7 +1174,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "2-3 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {},
   },
   {
@@ -1205,7 +1219,7 @@ export const SAMPLE_PRODUCTS = [
     images: ["/assets/js/data/images/bunny.png"],
     availability: "accepting",
     processingTime: "3-5 business days",
-    featured: true,
+    featured: false,
     isNew: false,
     variations: {},
   },
@@ -1235,9 +1249,25 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {},
   },
+
+{
+    id: "kbl-plu-005",
+    sku: "KBL-PLU-005",
+    name: "Octupus Plushie",
+    price: 1800,
+    category: "plushies",
+    description: "",
+    images: ["/assets/js/data/images/octo.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {},
+  },
+
 
 
   // -----------------HAIR ACCESSORIES------------ 
@@ -1926,7 +1956,7 @@ export const SAMPLE_PRODUCTS = [
     images: ["/assets/js/data/images/webharness.jpg"],
     availability: "accepting",
     processingTime: "3-5 business days",
-    featured: true,
+    featured: false,
     isNew: false,
     variations: {},
   },
@@ -1940,7 +1970,7 @@ export const SAMPLE_PRODUCTS = [
     images: ["/assets/js/data/images/victorianglove.png"],
     availability: "accepting",
     processingTime: "3-5 business days",
-    featured: true,
+    featured: false,
     isNew: false,
     variations: {},
   },
@@ -1987,6 +2017,22 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
+  {
+    id: "kbl-hnd-009",
+    sku: "KBL-HND-009",
+    name: "Floral Bloom Crochet Gajra",
+    price: 1400,
+    category: "handaccessories",
+    description: "If you'd like a different color, message me with the color of your choice.",
+    images: ["/assets/js/data/images/gajray.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: true,
+    isNew: false,
+    variations: {
+      color: [ "white", "maroon"]
+    },
+  },
 //---------- TECH COVERS----------
 
   
