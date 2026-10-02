@@ -461,22 +461,7 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
-  {
-    id: "kbl-clo-012",
-    sku: "KBL-CLO-012",
-    name: "Angel Mesh Cardigan",
-    price: 2500,
-    category: "clothing",
-    description: "",
-    images: ["/assets/js/data/images/angelmesh.jpe"],
-    availability: "accepting",
-    processingTime: "7-9 business days",
-    featured: false,
-    isNew: false,
-    variations: {
-      
-    },
-  },
+ 
 
 
 
@@ -709,7 +694,7 @@ export const SAMPLE_PRODUCTS = [
     price: 4500,
     category: "clothing",
     description: "Trendy and comfortable handmade cardigan constructed from classic granny hexagons, featuring striking earth-tone color blocks, voluminous sleeves, and snug ribbed cuffs and borders.",
-    images: ["/assets/js/data/images/hexagoncardigon.jpe"],
+    images: ["/assets/js/data/images/hexagoncardigan.jpe"],
     availability: "accepting",
     processingTime: "6–8 business days",
     featured: false,
@@ -791,7 +776,7 @@ export const SAMPLE_PRODUCTS = [
     price: 4800,
     category: "clothing",
     description: "A stunning and timeless handmade vintage-style cardigan featuring a rich crimson body with intricate textured stitchwork, delicate pearl buttons, matching lacy cuffs, and a gorgeous contrasting lace Peter Pan collar.",
-    images: ["/assets/js/data/images/crimson.jpe"],
+    images: ["/assets/js/data/images/crimsom.jpe"],
     availability: "accepting",
     processingTime: "6–8 business days",
     featured: false,
@@ -802,6 +787,22 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
+   {
+    id: "kbl-clo-033",
+    sku: "KBL-CLO-033",
+    name: "Angel Mesh Cardigan",
+    price: 2500,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/angelmesh.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
 
 // --------------- BAGS------------------------ 
 
