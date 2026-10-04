@@ -804,6 +804,23 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
+
+{
+    id: "kbl-clo-034",
+    sku: "KBL-CLO-034",
+    name: "The Heirloom Vest",
+    price: 3900,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/heirloomvest.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
 // --------------- BAGS------------------------ 
 
   {
@@ -1192,6 +1209,24 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
+
+ {
+    id: "kbl-flw-009",
+    sku: "KBL-FLW-009",
+    name: "Petals & Treats Bouquet",
+    price: 1000,
+    category: "flowers",
+    description: `Includes: Handcrafted flowers, 1 chocolate bar, professional custom floral wrapping.
+                  100% handmade and fully customizable for your favorite people.
+                  Keep away from direct moisture and dust to maintain its fresh look for years`,
+    images: ["/assets/js/data/images/chocobouquet.jpg", "/assets/js/data/images/chocobouquet1.jpe" ],
+    availability: "accepting",
+    processingTime: "2-3 business days",
+    featured: false,
+    isNew: true,
+    variations: {},
+  },
+
 
 
 // -------------- PLUSHIES------------
@@ -1900,6 +1935,24 @@ export const SAMPLE_PRODUCTS = [
     featured: false,
     isNew: false,
     variations: { },
+  },
+
+
+{
+    id: "kbl-hac-042",
+    sku: "KBL-HAC-042",
+    name: "The Bold Braid Headband",
+    price: 450,
+    category: "hairaccessories",
+    description: "",
+    images: ["/assets/js/data/images/braidhead.jpe" ],
+    availability: "accepting",
+    processingTime: "3–5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      size: [  "kids" ]
+     },
   },
 
 
