@@ -400,7 +400,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { },
   },
 
@@ -433,7 +433,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "12-15 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { 
       size:
       [
@@ -821,6 +821,27 @@ export const SAMPLE_PRODUCTS = [
       
     },
   },
+
+
+  {
+    id: "kbl-clo-035",
+    sku: "KBL-CLO-035",
+    name: "The Obsidian Grid Vest",
+    price: 2200,
+    category: "clothing",
+    description: `100% handcrafted slow fashion
+                  Custom made-to-order sizing available`,
+    images: ["/assets/js/data/images/grayvest1.jpe", "/assets/js/data/images/grayvest.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      
+    },
+  },
+
+
 // --------------- BAGS------------------------ 
 
   {
@@ -1557,7 +1578,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
       size: [
         { value: "Small", price: 400 },
@@ -1595,7 +1616,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
       color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
@@ -1611,7 +1632,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
       color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
@@ -1628,7 +1649,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: {
       color: [ "white", "black", "cream", "red", "navy", "brown", "green", "gray", "lavender", "pink"  ]
     },
@@ -1904,7 +1925,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "4–6 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { colour: ["Classic Red & Blue", "Miles Morales (Black & Red)", "Gwen Stacy (White & Pink)"] },
   },
   {
