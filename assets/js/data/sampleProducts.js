@@ -259,7 +259,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-001",
     sku: "KBL-CLO-001",
     name: "Mikasa Scarf",
-    price: 1600,
+    price: 2500,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/mikasa.png"],
