@@ -1105,7 +1105,20 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
-
+ {
+    id: "kbl-bag-019",
+    sku: "KBL-BAG-019",
+    name: "Crocheted Sandwich Wallet",
+    price: 1200,
+    category: "bags",
+    description: "",
+    images: ["/assets/js/data/images/sandwichwallet.jpe", "/assets/js/data/images/sandwichwallet1.jpe" ],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: true,
+    variations: {},
+  },
 
 // -------- FLOWERS -----------
 
