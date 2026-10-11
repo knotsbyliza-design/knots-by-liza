@@ -559,7 +559,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-018",
     sku: "KBL-CLO-018",
     name: "Gentleman's V-Neck Vest",
-    price: 4800,
+    price: 5000,
     category: "clothing",
     description: "Dapper and sophisticated handmade V-neck sweater vest featuring a textured stitch pattern and clean ribbed trims, designed specifically for adult men.",
     images: ["/assets/js/data/images/gentlemen.jpe"],
@@ -598,7 +598,9 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
-    variations: {},
+    variations: {
+      Age: [ {value: "5-6 years", price: 3500} ]
+    },
   },
   {
     id: "kbl-clo-021",
@@ -614,6 +616,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {},
   },
+
   {
     id: "kbl-clo-022",
     sku: "KBL-CLO-022",
@@ -674,7 +677,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-026",
     sku: "KBL-CLO-026",
     name: "Striped Pullover",
-    price: 5500,
+    price: 6500,
     category: "clothing",
     description: "Cozy and classic handmade crewneck sweater featuring bold horizontal stripes in rich maroon and cream, drop-shoulder long sleeves, and ribbed trim details for a relaxed everyday fit.",
     images: ["/assets/js/data/images/spullover.jpe"],
@@ -773,7 +776,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-032",
     sku: "KBL-CLO-032",
     name: "Crimson Heritage Collared Cardigan",
-    price: 4900,
+    price: 5000,
     category: "clothing",
     description: "A stunning and timeless handmade vintage-style cardigan featuring a rich crimson body with intricate textured stitchwork, delicate pearl buttons, matching lacy cuffs, and a gorgeous contrasting lace Peter Pan collar.",
     images: ["/assets/js/data/images/crimsom.jpe"],
@@ -791,7 +794,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-033",
     sku: "KBL-CLO-033",
     name: "Angel Mesh Cardigan",
-    price: 3500,
+    price: 3700,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/angelmesh.jpe"],
