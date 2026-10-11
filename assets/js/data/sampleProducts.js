@@ -877,7 +877,7 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
-  
+
 // --------------- BAGS------------------------ 
 
   {
@@ -2151,7 +2151,7 @@ export const SAMPLE_PRODUCTS = [
     images: ["/assets/js/data/images/gajray.jpe"],
     availability: "accepting",
     processingTime: "3-5 business days",
-    featured: true,
+    featured: false,
     isNew: false,
     variations: {
       color: [ "white", "maroon"]
