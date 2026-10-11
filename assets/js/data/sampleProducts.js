@@ -259,13 +259,13 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-001",
     sku: "KBL-CLO-001",
     name: "Mikasa Scarf",
-    price: 2500,
+    price: 2800,
     category: "clothing",
     description: "",
-    images: ["/assets/js/data/images/mikasa.png"],
+    images: ["/assets/js/data/images/mikasa.jpe"],
     availability: "accepting",
     processingTime: "3-7 business days",
-    featured: false,
+    featured: true,
     isNew: false,
     variations: {},
   },
@@ -862,7 +862,22 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
+  {
+    id: "kbl-clo-037",
+    sku: "KBL-CLO-037",
+    name: "The Gryffindor Stripe Scarf",
+    price: 2800,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/gryfinder.jpe"],
+    availability: "accepting",
+    processingTime: "3-7 business days",
+    featured: true,
+    isNew: false,
+    variations: {},
+  },
 
+  
 // --------------- BAGS------------------------ 
 
   {
@@ -2023,7 +2038,7 @@ export const SAMPLE_PRODUCTS = [
     images: ["/assets/js/data/images/gajrakids.jpg"],
     availability: "accepting",
     processingTime: "3-5 business days",
-    featured: false,
+    featured: true,
     isNew: false,
     variations: {},
   },
