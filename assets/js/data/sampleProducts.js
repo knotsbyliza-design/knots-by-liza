@@ -502,8 +502,8 @@ export const SAMPLE_PRODUCTS = [
   {
     id: "kbl-clo-015",
     sku: "KBL-CLO-015",
-    name: "Butterfly Wing Tapestry Sweater",
-    price: 6000,
+    name: "Butterfly Wing Tapestry Cardigan",
+    price: 6500,
     category: "clothing",
     description: "Stunning and intricate handmade sweater featuring a dramatic, full-span butterfly wing tapestry design across the front and sleeves with a comfortable relaxed fit.",
     images: ["/assets/js/data/images/butterflyc.jpe"],
@@ -513,9 +513,9 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: [
-        { value: "Kids", price: 6000 },
-        { value: "Teens", price: 7500 },
-        { value: "Adult", price: 9000 },
+        { value: "Kids", price: 6500 },
+        { value: "Teens", price: 8000 },
+        { value: "Adult", price: 9500 },
       ],
       colour: ["Black & Lavender", "Custom Colorway"],
     },
@@ -875,6 +875,190 @@ export const SAMPLE_PRODUCTS = [
     featured: true,
     isNew: false,
     variations: {},
+  },
+
+   {
+    id: "kbl-clo-038",
+    sku: "KBL-CLO-038",
+    name: "Classic Crochet Sweater",
+    price: 5000,
+    category: "clothing",
+    description: ` Material:  Soft Premium Acrylic / Wool Blend  
+                     Fit: Oversized / Longline Tunic `,
+    images: ["/assets/js/data/images/classicsweater.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      size: [ 
+        { value: "kids", price: 5000},
+        { value: "teens", price: 6000},
+        { value: "adults", price: 7000}
+      ]
+    },
+  },
+
+{
+    id: "kbl-clo-039",
+    sku: "KBL-CLO-039",
+    name: "The Honeycomb Crewneck Sweater",
+    price: 4500,
+    category: "clothing",
+    description: ``,
+    images: ["/assets/js/data/images/honeycombs.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      size: [ 
+        { value: "kids", price: 4500},
+        { value: "teens", price: 5000},
+        { value: "adults", price: 6000}
+      ]
+    },
+  },
+
+{
+    id: "kbl-clo-040",
+    sku: "KBL-CLO-040",
+    name: "Classic Comfort Hoodie",
+    price: 6000,
+    category: "clothing",
+    description: ` Hand-crocheted relaxed fit hoodie featuring a spacious front kangaroo pocket, cozy hood, and ribbed cuffs and hem for maximum everyday comfort. `,
+    images: ["/assets/js/data/images/hoodie.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+  {
+    id: "kbl-clo-041",
+    sku: "KBL-CLO-041",
+    name: "Academic V-neck Vest",
+    price: 4200,
+    category: "clothing",
+    description: ` Hand-crocheted relaxed fit hoodie featuring a spacious front kangaroo pocket, cozy hood, and ribbed cuffs and hem for maximum everyday comfort. `,
+    images: ["/assets/js/data/images/hoodie.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+  {
+    id: "kbl-clo-042",
+    sku: "KBL-CLO-042",
+    name: "Academic V-neck Vest",
+    price: 4200,
+    category: "clothing",
+    description: "",
+    images: ["/assets/js/data/images/academicv.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+  
+{
+    id: "kbl-clo-043",
+    sku: "KBL-CLO-043",
+    name: "Hooded Bomber Jacket",
+    price: 6000,
+    category: "clothing",
+    description: ` `,
+    images: ["/assets/js/data/images/crophoodie.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+  
+
+  {
+    id: "kbl-clo-044",
+    sku: "KBL-CLO-044",
+    name: "Ruffled Strap Pinafore Skirt",
+    price: 5500,
+    category: "clothing",
+    description: ` `,
+    images: ["/assets/js/data/images/rskirt.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+ {
+    id: "kbl-clo-045",
+    sku: "KBL-CLO-045",
+    name: "Cable-Lattice Leg Warmers",
+    price: 1500,
+    category: "clothing",
+    description: ` `,
+    images: ["/assets/js/data/images/legwarmer.jpe"],
+    availability: "accepting",
+    processingTime: "3-5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+
+  {
+    id: "kbl-clo-047",
+    sku: "KBL-CLO-047",
+    name: "Oversized Boxy Tee",
+    price: 4800,
+    category: "clothing",
+    description: ` `,
+    images: ["/assets/js/data/images/boxytee.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+
+   {
+    id: "kbl-clo-048",
+    sku: "KBL-CLO-048",
+    name: "Chevron Suspender Skirt",
+    price: 5300,
+    category: "clothing",
+    description: `Material: Premium Acrylic Yarn
+                   Fit: High-Waisted / Flared Fit
+                   Colors: Fully customizable 2-tone combination `,
+    images: ["/assets/js/data/images/skirt.jpe"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
   },
 
 
