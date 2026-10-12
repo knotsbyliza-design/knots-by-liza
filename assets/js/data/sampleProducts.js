@@ -937,8 +937,9 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
-  {
-    id: "kbl-clo-041",
+ /* 
+ {
+   id: "kbl-clo-041",
     sku: "KBL-CLO-041",
     name: "Academic V-neck Vest",
     price: 4200,
@@ -953,7 +954,7 @@ export const SAMPLE_PRODUCTS = [
       
     },
   },
-
+*/
   {
     id: "kbl-clo-042",
     sku: "KBL-CLO-042",
@@ -961,7 +962,7 @@ export const SAMPLE_PRODUCTS = [
     price: 4200,
     category: "clothing",
     description: "",
-    images: ["/assets/js/data/images/academicv.jpe"],
+    images: ["/assets/js/data/images/academic.jpe"],
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
