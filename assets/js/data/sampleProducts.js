@@ -2394,7 +2394,7 @@ export const SAMPLE_PRODUCTS = [
   {
     id: "kbl-dec-001",
     sku: "KBL-DEC-001",
-    name: "Granny Square Tissue Box",
+    name: "Granny Square Tissue Box Cover",
     price: 1200,
     category: "home-decor",
     description: "If you'd like a different color, message me with the color of your choice.",
