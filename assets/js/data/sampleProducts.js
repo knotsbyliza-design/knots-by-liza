@@ -945,7 +945,7 @@ export const SAMPLE_PRODUCTS = [
     price: 3000,
     category: "clothing",
     description: 
-    images: ["/assets/js/data/images/lacecorset.jpe"],
+    images: ["/assets/js/data/images/lacecorset.jpe"], 
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
