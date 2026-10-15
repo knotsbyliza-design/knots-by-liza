@@ -82,15 +82,21 @@ function renderProduct(p) {
               (key) => `
             <div class="variation-group" data-variation-key="${key}">
               <span class="variation-group__label">${capitalize(key)}</span>
-              <div class="variation-options">
-                                ${normalizeVariationOptions(p.variations[key])
+                           <div class="variation-options">
+                ${normalizeVariationOptions(p.variations[key])
                   .map(
                     (opt, i) =>
-                      `<button type="button" class="variation-chip ${i === 0 ? "selected" : ""}" data-value="${escapeHTML(opt.value)}">${escapeHTML(opt.value)}${typeof opt.price === "number" ? ` — ${formatPrice(opt.price)}` : ""}</button>`
+                      `<button type="button" class="variation-chip ${i === 0 ? "selected" : ""}" data-value="${escapeHTML(opt.value)}" data-custom="${opt.custom ? "true" : "false"}">${escapeHTML(opt.value)}${typeof opt.price === "number" ? ` — ${formatPrice(opt.price)}` : ""}</button>`
                   )
                   .join("")}
               </div>
+              ${
+                normalizeVariationOptions(p.variations[key]).some((o) => o.custom)
+                  ? `<input type="text" class="text-input variation-custom-input" maxlength="60" placeholder="Type your ${escapeHTML(key)} choice" style="display:none; margin-top:10px" />`
+                  : ""
+              }
             </div>`
+
             )
             .join("")}
         </div>
@@ -125,15 +131,28 @@ function renderProduct(p) {
   });
 
    // Variation chips
+
+  function syncCustomInput(group) {
+    const input = group.querySelector(".variation-custom-input");
+    if (!input) return;
+    const selected = group.querySelector(".variation-chip.selected");
+    input.style.display = selected && selected.dataset.custom === "true" ? "" : "none";
+  }
+
   root.querySelectorAll(".variation-group").forEach((group) => {
+    syncCustomInput(group);
     group.querySelectorAll(".variation-chip").forEach((chip) => {
       chip.addEventListener("click", () => {
         group.querySelectorAll(".variation-chip").forEach((c) => c.classList.remove("selected"));
         chip.classList.add("selected");
+        syncCustomInput(group);
         updatePriceDisplay();
+        if (chip.dataset.custom === "true") group.querySelector(".variation-custom-input")?.focus();
       });
     });
   });
+
+
 
   // Qty stepper
   const qtyInput = root.querySelector("#qty-input");
@@ -154,6 +173,26 @@ function renderProduct(p) {
       const selected = group.querySelector(".variation-chip.selected");
       if (selected) variation[key] = selected.dataset.value;
     });
+    return variation;
+  }
+
+    // Same as getSelectedVariation, but swaps in what the customer typed for a
+  // "Custom" choice. Returns null (and shows a message) if they left it empty.
+  function getCartVariation() {
+    const variation = getSelectedVariation();
+    for (const group of root.querySelectorAll(".variation-group")) {
+      const selected = group.querySelector(".variation-chip.selected");
+      const input = group.querySelector(".variation-custom-input");
+      if (selected && selected.dataset.custom === "true" && input) {
+        const typed = input.value.trim();
+        if (!typed) {
+          showToast(`Please type your custom ${group.dataset.variationKey}.`, "error");
+          input.focus();
+          return null;
+        }
+        variation[group.dataset.variationKey] = `Custom: ${typed}`;
+      }
+    }
     return variation;
   }
 
@@ -178,9 +217,10 @@ function renderProduct(p) {
 
   root.querySelector("#buy-now-btn")?.addEventListener("click", () => {
     const qty = Number(qtyInput.value) || 1;
-    const variation = getSelectedVariation();
-    const resolvedPrice = resolvedPriceFor(variation);
-    const result = addToCart(p.id, variation, qty, resolvedPrice);
+       const cartVariation = getCartVariation();
+    if (!cartVariation) return;
+    const resolvedPrice = resolvedPriceFor(getSelectedVariation());
+    const result = addToCart(p.id, cartVariation, qty, resolvedPrice);
     if (result.ok) {
       location.href = "cart.html";
     } else {

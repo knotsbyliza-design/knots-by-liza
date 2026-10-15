@@ -35,7 +35,7 @@ function render() {
       const product = getProductById(line.productId);
       const orderable = product ? canOrder(product) : false;
       return `
-      <div class="cart-line" data-product-id="${line.productId}" data-variation='${escapeHTML(JSON.stringify(line.variation))}'>
+      <div class="cart-line" data-product-id="${line.productId}" data-variation="${encodeURIComponent(JSON.stringify(line.variation))}">
         <img class="cart-line__img" src="${line.image}" alt="${escapeHTML(line.name)}" />
         <div>
           <p class="cart-line__name">${escapeHTML(line.name)}</p>
@@ -59,7 +59,7 @@ function render() {
 
   linesRoot.querySelectorAll(".cart-line").forEach((lineEl) => {
     const productId = lineEl.dataset.productId;
-    const variation = JSON.parse(lineEl.dataset.variation);
+        const variation = JSON.parse(decodeURIComponent(lineEl.dataset.variation));
     const qtyInput = lineEl.querySelector(".js-qty-input");
 
     lineEl.querySelector(".js-qty-minus").addEventListener("click", () => {

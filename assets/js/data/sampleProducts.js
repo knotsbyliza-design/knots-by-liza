@@ -752,7 +752,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["Adult Size"],
-      colour: ["Sage Green", "Cream", "Maroon", "Custom Color"],
+      colour: ["Sage Green", "Cream", "Maroon", { value: "Custom", custom: true }],
     },
   },
   {
@@ -769,7 +769,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["Adult Size"],
-      colour: ["Pastel Blue & Cream", "Pink & Lavender", "Maroon & Cream", "Blue & White", "Navy & Gray", "Custom Colors"],
+      colour: ["Pastel Blue & Cream", "Pink & Lavender", "Maroon & Cream", "Blue & White", "Navy & Gray", { value: "Custom", custom: true }],
     },
   },
   {
@@ -1061,6 +1061,28 @@ export const SAMPLE_PRODUCTS = [
       
     },
   },
+
+
+ {
+    id: "kbl-clo-049",
+    sku: "KBL-CLO-049",
+    name: "Buttercream Cable Pullover",
+    price: 6000,
+    category: "clothing",
+    description: `Material: Premium Acrylic Yarn
+                   Fit: High-Waisted / Flared Fit
+                   Colors: Fully customizable 2-tone combination `,
+    images: ["/assets/js/data/images/buttercream.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      
+    },
+  },
+
+
 
 
 // --------------- BAGS------------------------ 
@@ -2145,7 +2167,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "5 Pairs (10 pieces)", price: 450 },
         { value: "10 Pairs (20 pieces)", price: 800 },
       ],
-      color: [ "Random Multicolors", "Custom Colors"]
+      color: [ "Random Multicolors", { value: "Custom", custom: true }]
     },
   },
   {
@@ -2451,7 +2473,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "Without Name", price: 1600 },
         { value: "With Custom Name", price: 1700 },
       ],
-      colour: ["Classic Red Rose", "Soft Pink Rose", "Custom"],
+      colour: ["Classic Red Rose", "Soft Pink Rose", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2471,7 +2493,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "Without Name", price: 1500 },
         { value: "With Custom Name", price: 1600 },
       ],
-      colour: ["Soft Pink", "Peach", "Sunshine Yellow", "Lavender", "Custom"],
+      colour: ["Soft Pink", "Peach", "Sunshine Yellow", "Lavender", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2500,7 +2522,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Pink", "Soft Lavender", "Red", "Maroon", "Blue", "Custom"] },
+    variations: { colour: ["Pink", "Soft Lavender", "Red", "Maroon", "Blue", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-008",
@@ -2514,7 +2536,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Pink & Cream Striped", "Pastel Multi", "Custom"] },
+    variations: { colour: ["Pink & Cream Striped", "Pastel Multi", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-009",
@@ -2528,7 +2550,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Olive Green", "Autumn Orange", "Mustard Yellow", "Burgundy", "Custom"] },
+    variations: { colour: ["Olive Green", "Autumn Orange", "Mustard Yellow", "Burgundy", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-010",
@@ -2542,7 +2564,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Pink & White", "Blue & White", "Custom"] },
+    variations: { colour: ["Pink & White", "Blue & White", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-011",
@@ -2556,7 +2578,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Classic Red", "Blush Pink", "Off-White", "Dusty Rose", "Custom"] },
+    variations: { colour: ["Classic Red", "Blush Pink", "Off-White", "Dusty Rose", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-012",
@@ -2570,7 +2592,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Pastel Blue & Cream", "Soft Pink & Cream", "Lavender & White", "Custom"] },
+    variations: { colour: ["Pastel Blue & Cream", "Soft Pink & Cream", "Lavender & White", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-013",
@@ -2584,7 +2606,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Cream White", "Dusty Pink", "Soft Grey", "Custom"] },
+    variations: { colour: ["Cream White", "Dusty Pink", "Soft Grey", { value: "Custom", custom: true }] },
   },
 
 
@@ -2744,7 +2766,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["12–18 Months"],
-      colour: ["Classic Crimson", "Soft Pink", "Cream", "Custom"],
+      colour: ["Classic Crimson", "Soft Pink", "Cream", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2766,7 +2788,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "6–9 Months", price: 700 },
         { value: "9–12 Months", price: 750 },
       ],
-      colour: ["Mustard Yellow", "Chocolate Brown", "Cream", "Soft Pink", "Baby Blue", "Custom"],
+      colour: ["Mustard Yellow", "Chocolate Brown", "Cream", "Soft Pink", "Baby Blue", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2783,7 +2805,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["3–6 Months"],
-      colour: ["Pure White", "Soft Cream", "Pastel Pink", "Custom Color"],
+      colour: ["Pure White", "Soft Cream", "Pastel Pink", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2800,7 +2822,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["3–6 Months"],
-      colour: ["Beige", "Soft Cream", "Dusty Rose", "Oatmeal", "Custom"],
+      colour: ["Beige", "Soft Cream", "Dusty Rose", "Oatmeal", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2822,7 +2844,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "6–9 Months", price: 2700 },
         { value: "9–12 Months", price: 3000 },
       ],
-      colour: ["Lilac", "Soft Mustard", "Dusty Rose", "Cream", "Custom"],
+      colour: ["Lilac", "Soft Mustard", "Dusty Rose", "Cream", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2846,7 +2868,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "2–4 Years", price: 3300 },
         { value: "4–6 Years", price: 3900 },
       ],
-      colour: ["Custom Color"],
+      colour: [{ value: "Custom", custom: true }],
     },
   },
   {
@@ -2863,7 +2885,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["3–6 Months"],
-      colour: ["Denim Blue", "Navy", "Soft Grey", "Cream", "Custom"],
+      colour: ["Denim Blue", "Navy", "Soft Grey", "Cream", { value: "Custom", custom: true }],
     },
   },
   {
@@ -2880,7 +2902,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["1 Year (12 Months)"],
-      colour: ["Custom Color"],
+      colour: [{ value: "Custom", custom: true }],
     },
   },
   {
@@ -2901,7 +2923,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "3–6 Months", price: 1050 },
         { value: "6–9 Months", price: 1150 },
       ],
-      colour: ["Custom Color"],
+      colour: [{ value: "Custom", custom: true }],
     },
   },
 
