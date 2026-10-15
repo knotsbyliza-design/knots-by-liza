@@ -937,15 +937,15 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
- /* 
+  
  {
    id: "kbl-clo-041",
     sku: "KBL-CLO-041",
-    name: "Academic V-neck Vest",
-    price: 4200,
+    name: "Lace Corset Top",
+    price: 3000,
     category: "clothing",
-    description: ` Hand-crocheted relaxed fit hoodie featuring a spacious front kangaroo pocket, cozy hood, and ribbed cuffs and hem for maximum everyday comfort. `,
-    images: ["/assets/js/data/images/hoodie.jpe"],
+    description: 
+    images: ["/assets/js/data/images/lacecorset.jpe"],
     availability: "accepting",
     processingTime: "5-7 business days",
     featured: false,
@@ -954,7 +954,7 @@ export const SAMPLE_PRODUCTS = [
       
     },
   },
-*/
+
   {
     id: "kbl-clo-042",
     sku: "KBL-CLO-042",
