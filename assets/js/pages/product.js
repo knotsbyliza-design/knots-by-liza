@@ -201,12 +201,13 @@ function renderProduct(p) {
     document.getElementById("detail-price").textContent = formatPrice(resolved ?? p.price);
   }
 
-      root.querySelector("#add-to-cart-btn")?.addEventListener("click", () => {
+     root.querySelector("#add-to-cart-btn")?.addEventListener("click", () => {
     const qty = Number(qtyInput.value) || 1;
-    const variation = getSelectedVariation();
-    const resolvedPrice = resolvedPriceFor(variation);
-    const result = addToCart(p.id, variation, qty, resolvedPrice);
-        if (result.ok) {
+    const cartVariation = getCartVariation();
+    if (!cartVariation) return;
+    const resolvedPrice = resolvedPriceFor(getSelectedVariation());
+    const result = addToCart(p.id, cartVariation, qty, resolvedPrice);
+    if (result.ok) {
       showToast("Added to cart 💜", "success", { label: "View Cart", href: "cart.html" });
     } else if (result.reason === "max-qty") {
       showToast(`You've reached the max quantity for this item.`, "error");
@@ -217,7 +218,7 @@ function renderProduct(p) {
 
   root.querySelector("#buy-now-btn")?.addEventListener("click", () => {
     const qty = Number(qtyInput.value) || 1;
-       const cartVariation = getCartVariation();
+    const cartVariation = getCartVariation();
     if (!cartVariation) return;
     const resolvedPrice = resolvedPriceFor(getSelectedVariation());
     const result = addToCart(p.id, cartVariation, qty, resolvedPrice);
@@ -228,6 +229,7 @@ function renderProduct(p) {
     }
   });
 }
+
 
 function renderRelated(p) {
   const related = getRelatedProducts(p, 4);

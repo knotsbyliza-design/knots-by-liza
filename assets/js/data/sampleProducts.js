@@ -259,7 +259,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-001",
     sku: "KBL-CLO-001",
     name: "Mikasa Scarf",
-    price: 2800,
+    price: 3000,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/mikasa.jpe"],
@@ -283,9 +283,9 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: [
-        { value: "Small", price: 5000 },
+        { value: "Small", price: 5500 },
         { value: "Medium", price: 7000 },
-        { value: "Large (XL)", price: 8000 },
+        { value: "Large (XL)", price: 8500 },
       ],
     },
   },
@@ -293,7 +293,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-003",
     sku: "KBL-CLO-003",
     name: "Spider Web Bandana",
-    price: 1300,
+    price: 1500,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/spider-bandana1.jpe", "/assets/js/data/images/spider-bandana2.jpe"],
@@ -362,7 +362,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "12-15 business days",
     featured: false,
-    isNew: true,
+    isNew: false,
     variations: { },
   },
 
@@ -382,9 +382,9 @@ export const SAMPLE_PRODUCTS = [
     variations: { 
       size:
       [
-         { value: "Kids", price: 3000 },
-          { value: "Teens", price: 5500 },
-        { value:"Adult size", price: 8000}, 
+         { value: "Kids", price: 3300 },
+          { value: "Teens", price: 5800 },
+        { value:"Adult size", price: 9500}, 
       ]
     },
   },
@@ -437,9 +437,9 @@ export const SAMPLE_PRODUCTS = [
     variations: { 
       size:
       [
-         { value: "Kids", price: 2800 },
-          { value: "Teens", price: 3800 },
-        { value:"Adult size", price: 5000 }, 
+         { value: "Kids", price: 3000 },
+          { value: "Teens", price: 4500 },
+        { value:"Adult size", price: 6000 }, 
       ]
     },
   },
@@ -448,7 +448,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-012",
     sku: "KBL-CLO-012",
     name: "Earthline Mesh Pullover",
-    price: 2400,
+    price: 3000,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/earthlinemesh.jpe"],
@@ -469,7 +469,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-013",
     sku: "KBL-CLO-013",
     name: "Off-the-shoulder Crochet Sweater",
-    price: 3500,
+    price: 4200,
     category: "clothing",
     description: "Elegant and cozy handmade off-the-shoulder sweater featuring a folded collar, beautiful ribbed texture, wide sleeves, and a sweet contrast bow detail. Crafted in standard adult sizing.",
     images: ["/assets/js/data/images/offtop.jpe"],
@@ -494,8 +494,8 @@ export const SAMPLE_PRODUCTS = [
     variations: {
       size: [
         { value: "Kids", price: 3500 },
-        { value: "Teens", price: 4000 },
-        { value: "Adult", price: 5000 },
+        { value: "Teens", price: 4300 },
+        { value: "Adult", price: 5500 },
       ],
     },
   },
@@ -524,7 +524,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-016",
     sku: "KBL-CLO-016",
     name: "Spider Tapestry Sweater",
-    price: 5300,
+    price: 5500,
     category: "clothing",
     description: "Edgy and bold handmade long-sleeve sweater featuring a striking, detailed spider tapestry design on the front against a classic black base with ribbed trims.",
     images: ["/assets/js/data/images/spideysweater.png"],
@@ -576,7 +576,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-019",
     sku: "KBL-CLO-019",
     name: "Tulip Cardigan",
-    price: 4500,
+    price: 4800,
     category: "clothing",
     description: "Charming and delicate handmade cardigan featuring a sweet tulip stitch pattern across the body, a V-neckline with buttons, and lovely long sleeves. Crafted in standard adult sizing.",
     images: ["/assets/js/data/images/tulipcardigan.jpe"],
@@ -590,7 +590,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-020",
     sku: "KBL-CLO-020",
     name: "Hooded Kids' Poncho",
-    price: 3500,
+    price: 4000,
     category: "clothing",
     description: "Adorable and cozy handmade hooded poncho for kids featuring delicate openwork patterns, a warm hood, front tie strings with decorative pom-poms, and a lovely scalloped hem.",
     images: ["/assets/js/data/images/"],
@@ -599,14 +599,14 @@ export const SAMPLE_PRODUCTS = [
     featured: false,
     isNew: false,
     variations: {
-      Age: [ {value: "5-6 years", price: 3500} ]
+      Age: [ {value: "5-6 years", price: 4000} ]
     },
   },
   {
     id: "kbl-clo-021",
     sku: "KBL-CLO-021",
     name: "Laced Princess Poncho-Style Top",
-    price: 3300,
+    price: 4000,
     category: "clothing",
     description: "Sweet and graceful handmade poncho-style top for kids, featuring intricate openwork lace patterns, statement puffed sleeves, a charming tie-string bow detail at the neckline, and a gorgeous scalloped bottom hem.",
     images: ["/assets/js/data/images/poncho.jpe"],
@@ -614,8 +614,8 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
-    variations: {},
-  },
+    variations: {  size: [ {value: "5-6 years", price: 4000} ] },
+  }, 
 
   {
     id: "kbl-clo-022",
@@ -649,7 +649,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-024",
     sku: "KBL-CLO-024",
     name: "3D Daisy Appliqué Cardigan",
-    price: 6000,
+    price: 6500,
     category: "clothing",
     description: "Cozy and charming handmade open-front cardigan featuring a relaxed fit, textured stitchwork, and delightful 3D daisy floral appliques scattered across the sleeves and body.",
     images: ["/assets/js/data/images/3dcardigan.jpe"],
@@ -663,7 +663,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-025",
     sku: "KBL-CLO-025",
     name: "Colorblock Cardigan",
-    price: 6800,
+    price: 7000,
     category: "clothing",
     description: "Cozy and modern handmade oversized cardigan featuring a stylish earthy colorblock design, balloon sleeves, ribbed front trim, and a comfortable relaxed fit.",
     images: ["/assets/js/data/images/colorblock.jpe"],
@@ -677,7 +677,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-026",
     sku: "KBL-CLO-026",
     name: "Striped Pullover",
-    price: 6500,
+    price: 7000,
     category: "clothing",
     description: "Cozy and classic handmade crewneck sweater featuring bold horizontal stripes in rich maroon and cream, drop-shoulder long sleeves, and ribbed trim details for a relaxed everyday fit.",
     images: ["/assets/js/data/images/spullover.jpe"],
@@ -728,7 +728,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-029",
     sku: "KBL-CLO-029",
     name: "Floral Mesh Scarf",
-    price: 2900,
+    price: 3000,
     category: "clothing",
     description: "Charming and delicate handmade mesh stitch scarf featuring lovely dangling floral appliques and vines with multi-colored roses along the ends.",
     images: ["/assets/js/data/images/meshcarf.jpe"],
@@ -742,7 +742,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-030",
     sku: "KBL-CLO-030",
     name: "Turtleneck Cape",
-    price: 4000,
+    price: 5500,
     category: "clothing",
     description: "A cozy and chic handmade autumn wrap featuring a prominent ribbed turtleneck collar, textured open stitchwork, and playful fringed hem details. Designed for a comfortable, modest layered fit.",
     images: ["/assets/js/data/images/cape.jpe"],
@@ -776,7 +776,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-032",
     sku: "KBL-CLO-032",
     name: "Crimson Heritage Collared Cardigan",
-    price: 5000,
+    price: 6000,
     category: "clothing",
     description: "A stunning and timeless handmade vintage-style cardigan featuring a rich crimson body with intricate textured stitchwork, delicate pearl buttons, matching lacy cuffs, and a gorgeous contrasting lace Peter Pan collar.",
     images: ["/assets/js/data/images/crimsom.jpe"],
@@ -794,7 +794,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-033",
     sku: "KBL-CLO-033",
     name: "Angel Mesh Cardigan",
-    price: 3700,
+    price: 3900,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/angelmesh.jpe"],
@@ -812,7 +812,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-034",
     sku: "KBL-CLO-034",
     name: "The Heirloom Vest",
-    price: 4200,
+    price: 4500,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/heirloomvest.jpe"],
@@ -830,7 +830,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-035",
     sku: "KBL-CLO-035",
     name: "The Obsidian Grid Vest",
-    price: 2400,
+    price: 3800,
     category: "clothing",
     description: `100% handcrafted slow fashion
                   Custom made-to-order sizing available`,
@@ -848,7 +848,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-036",
     sku: "KBL-CLO-036",
     name: "Tie-Front Cropped Crochet Lacy Cardigan",
-    price: 4000,
+    price: 4200,
     category: "clothing",
     description: `100% handcrafted slow fashion
                   Custom made-to-order sizing available`,
@@ -894,7 +894,7 @@ export const SAMPLE_PRODUCTS = [
       size: [ 
         { value: "kids", price: 5000},
         { value: "teens", price: 6000},
-        { value: "adults", price: 7000}
+        { value: "adults", price: 7500}
       ]
     },
   },
@@ -914,8 +914,8 @@ export const SAMPLE_PRODUCTS = [
     variations: {
       size: [ 
         { value: "kids", price: 4500},
-        { value: "teens", price: 5000},
-        { value: "adults", price: 6000}
+        { value: "teens", price: 5500},
+        { value: "adults", price: 6500}
       ]
     },
   },
@@ -924,7 +924,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-040",
     sku: "KBL-CLO-040",
     name: "Classic Comfort Hoodie",
-    price: 6000,
+    price: 6500,
     category: "clothing",
     description: ` Hand-crocheted relaxed fit hoodie featuring a spacious front kangaroo pocket, cozy hood, and ribbed cuffs and hem for maximum everyday comfort. `,
     images: ["/assets/js/data/images/hoodie.jpe"],
@@ -942,7 +942,7 @@ export const SAMPLE_PRODUCTS = [
    id: "kbl-clo-041",
     sku: "KBL-CLO-041",
     name: "Lace Corset Top",
-    price: 3000,
+    price: 3500,
     category: "clothing",
     description: "", 
     images: ["/assets/js/data/images/lacecorset.jpe"], 
@@ -959,7 +959,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-042",
     sku: "KBL-CLO-042",
     name: "Academic V-neck Vest",
-    price: 4200,
+    price: 4500,
     category: "clothing",
     description: "",
     images: ["/assets/js/data/images/academic.jpe"],
@@ -976,7 +976,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-043",
     sku: "KBL-CLO-043",
     name: "Hooded Bomber Jacket",
-    price: 6000,
+    price: 7500,
     category: "clothing",
     description: ` `,
     images: ["/assets/js/data/images/crophoodie.jpe"],
@@ -994,7 +994,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-044",
     sku: "KBL-CLO-044",
     name: "Ruffled Strap Pinafore Skirt",
-    price: 5500,
+    price: 6000,
     category: "clothing",
     description: ` `,
     images: ["/assets/js/data/images/rskirt.jpe"],
@@ -1011,7 +1011,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-045",
     sku: "KBL-CLO-045",
     name: "Cable-Lattice Leg Warmers",
-    price: 1500,
+    price: 1800,
     category: "clothing",
     description: ` `,
     images: ["/assets/js/data/images/legwarmer.jpe"],
@@ -1047,7 +1047,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-048",
     sku: "KBL-CLO-048",
     name: "Chevron Suspender Skirt",
-    price: 5300,
+    price: 6000,
     category: "clothing",
     description: `Material: Premium Acrylic Yarn
                    Fit: High-Waisted / Flared Fit
@@ -1067,7 +1067,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-clo-049",
     sku: "KBL-CLO-049",
     name: "Buttercream Cable Pullover",
-    price: 6000,
+    price: 7000,
     category: "clothing",
     description: `Material: Premium Acrylic Yarn
                    Fit: High-Waisted / Flared Fit
