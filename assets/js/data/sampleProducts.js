@@ -517,7 +517,7 @@ export const SAMPLE_PRODUCTS = [
         { value: "Teens", price: 8000 },
         { value: "Adult", price: 9500 },
       ],
-      colour: ["Black & Lavender", "Custom Colorway"],
+      colour: ["Black & Lavender", { value: "Custom", custom: true }],
     },
   },
   {
@@ -552,7 +552,7 @@ export const SAMPLE_PRODUCTS = [
     variations: {
       size: ["Adult Size"],
       fit: ["Men's Fit", "Women's Fit"],
-      colour: ["Classic Black", "White", "Pink", "Custom Color"],
+      colour: ["Classic Black", "White", "Pink", { value: "Custom", custom: true }],
     },
   },
   {
@@ -569,7 +569,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["Adult Size"],
-      colour: ["Coffee Brown", "Charcoal Grey", "Navy Blue", "Custom"],
+      colour: ["Coffee Brown", "Charcoal Grey", "Navy Blue", { value: "Custom", custom: true }],
     },
   },
   {
@@ -643,7 +643,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Pure White", "Cream", "Beige", "Custom Color"] },
+    variations: { colour: ["Pure White", "Cream", "Beige", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-clo-024",
@@ -704,7 +704,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["Adult Size"],
-      colour: ["Custom Color"],
+      colour: [{ value: "Custom", custom: true }],
     },
   },
   {
@@ -721,7 +721,7 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       size: ["Adult Size"],
-      colour: ["Custom Color"],
+      colour: [{ value: "Custom", custom: true }],
     },
   },
   {
@@ -736,7 +736,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Custom Color"] },
+    variations: { colour: [{ value: "Custom", custom: true }] },
   },
   {
     id: "kbl-clo-030",
@@ -2508,7 +2508,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "4–6 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Custom Color"] },
+    variations: { colour: [{ value: "Custom", custom: true }] },
   },
   {
     id: "kbl-dec-007",
