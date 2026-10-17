@@ -477,7 +477,7 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "5–7 business days",
     featured: false,
     isNew: false,
-    variations: { colour: ["Cocoa Brown & White", "Soft Pink & Black", "Custom"] },
+    variations: { colour: ["Cocoa Brown & White", "Soft Pink & Black", { value: "Custom", custom: true }] },
   },
   {
     id: "kbl-clo-014",
