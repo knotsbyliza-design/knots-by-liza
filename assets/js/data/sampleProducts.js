@@ -2927,5 +2927,26 @@ export const SAMPLE_PRODUCTS = [
     },
   },
 
+  {
+    id: "kbl-bby-018",
+    sku: "KBL-BBY-018",
+    name: "Panda Button-Up Vest",
+    price: 2300,
+    category: "baby-collection",
+    description: "",
+    images: ["/assets/js/data/images/pandavest.jpg", "/assets/js/data/images/pandavest1.jpg", "/assets/js/data/images/pandavest2.jpg" ],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      size: [
+        { value: "9-12 months", price: 2300 },
+  
+      ],
+      colour: [{ value: "Custom", custom: true }],
+    },
+  },
   
 ];
+
