@@ -14,9 +14,24 @@ const state = {
   category: params.get("category") || "all",
   minPrice: null,
   maxPrice: null,
- 
   sort: "featured",
 };
+
+// On phones/tablets the filters stack above the products, so after picking a
+// category we scroll down to the results. On desktop the sidebar sits beside
+// the products, so no scrolling is needed.
+function scrollToResults() {
+  if (!window.matchMedia("(max-width: 900px)").matches) return;
+  const target = document.querySelector(".shop-toolbar");
+  if (!target) return;
+  // Wait for the new product grid to finish laying out, then scroll to it.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
+}
 
 // Render category filter checkboxes
 const categoryFilterEl = document.getElementById("filter-categories");
@@ -31,7 +46,7 @@ function renderCategoryFilters() {
     </label>`
     )
     .join("");
-    categoryFilterEl.querySelectorAll('input[name="category"]').forEach((input) => {
+  categoryFilterEl.querySelectorAll('input[name="category"]').forEach((input) => {
     input.addEventListener("change", () => {
       state.category = input.value;
       render();
@@ -62,38 +77,13 @@ document.getElementById("clear-filters").addEventListener("click", () => {
   state.category = "all";
   state.minPrice = null;
   state.maxPrice = null;
- 
   state.sort = "featured";
   document.getElementById("search-input").value = "";
   document.getElementById("sort-select").value = "featured";
   document.getElementById("filter-min-price").value = "";
   document.getElementById("filter-max-price").value = "";
-  
- // On phones/tablets the filters stack above the products, so after picking a
-// category we scroll down to the results. On desktop the sidebar sits beside
-// the products, so no scrolling is needed.
-function scrollToResults() {
-  if (!window.matchMedia("(max-width: 900px)").matches) return;
-  const target = document.querySelector(".shop-toolbar");
-  if (!target) return;
-  // Wait for the new product grid to finish laying out, then scroll to it.
-  requestAnimationFrame(() => {
-    requestAnimationFrame(() => {
-      const top = target.getBoundingClientRect().top + window.scrollY - 90;
-      window.scrollTo({ top, behavior: "smooth" });
-    });
-  });
-}
-
-renderCategoryFilters();
-render();
-
-// Arriving from a homepage category card (shop.html?category=...): go straight
-// to the products. Skipped when the link has a #categories anchor, because that
-// link is meant to land on the filters.
-if (params.get("category") && !location.hash) {
-  setTimeout(scrollToResults, 150);
-}
+  renderCategoryFilters();
+  render();
 });
 
 const grid = document.getElementById("product-grid");
@@ -111,3 +101,10 @@ function render() {
 
 renderCategoryFilters();
 render();
+
+// Arriving from a homepage category card (shop.html?category=...): go straight
+// to the products. Skipped when the link has a #categories anchor, because that
+// link is meant to land on the filters.
+if (params.get("category") && !location.hash) {
+  setTimeout(scrollToResults, 150);
+}
