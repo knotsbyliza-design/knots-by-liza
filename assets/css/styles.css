@@ -256,8 +256,7 @@ p { margin: 0 0 1em; }
 .filters__price-row { display: flex; gap: 10px; }
 .filters__price-row input { width: 100%; }
 
-.shop-toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 24px; }
-.search-input {
+.shop-toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 24px; scroll-margin-top: 90px; }.search-input {
   display: flex; align-items: center; gap: 8px; background: var(--surface);
   border: 1.5px solid var(--border); border-radius: 999px; padding: 10px 16px; flex: 1; min-width: 220px;
 }

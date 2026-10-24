@@ -1592,12 +1592,14 @@ export const SAMPLE_PRODUCTS = [
     price: 250,
     category: "hairaccessories",
     description: "The price is for hairpin pair only, for the frock visit Baby collection. If you'd like a different color, message me with the color of your choice.",
-    images: ["/assets/js/data/images/frockstyle1.png"],
+    images: ["/assets/js/data/images/Bow Pin.jpg"],
     availability: "accepting",
     processingTime: "3-5 business days",
     featured: false,
     isNew: false,
-    variations: {},
+    variations: {
+      color: [ "red", "pink", "peach", "baby blue", "lavender", {value: "custom", custom: true }]
+    },
   },
   {
     id: "kbl-hac-002",
@@ -2756,7 +2758,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-bby-009",
     sku: "KBL-BBY-009",
     name: "Bobble Flounce Frock",
-    price: 2500,
+    price: 2800,
     category: "baby-collection",
     description: "Exquisite handcrafted baby frock featuring textured bobble stitch accents along the yoke and a beautifully flared lace hemline.",
     images: ["/assets/js/data/images/bobblefrock.jpe"],
