@@ -75,7 +75,14 @@ document.getElementById("clear-filters").addEventListener("click", () => {
 function scrollToResults() {
   if (!window.matchMedia("(max-width: 900px)").matches) return;
   const target = document.querySelector(".shop-toolbar");
-  if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (!target) return;
+  // Wait for the new product grid to finish laying out, then scroll to it.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
+  });
 }
 
 renderCategoryFilters();
