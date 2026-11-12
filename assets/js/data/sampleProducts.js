@@ -613,7 +613,7 @@ export const SAMPLE_PRODUCTS = [
     availability: "accepting",
     processingTime: "5–7 business days",
     featured: false,
-    isNew: false,
+    isNew: true,
     variations: {  size: [ {value: "5-6 years", price: 4000} ] },
   }, 
 
@@ -1518,7 +1518,22 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
-
+ {
+    id: "kbl-flw-011",
+    sku: "KBL-FLW-011",
+    name: "Giant SUnflower",
+    price: 1800,
+    category: "flowers",
+    description: `Height: 21 inches
+                  Flower diameter: 8 inches
+                    Material: Pipe cleaners`,
+    images: ["/assets/js/data/images/giantsunflower.jpg" ],
+    availability: "accepting",
+    processingTime: "2-3 business days",
+    featured: false,
+    isNew: true,
+    variations: {},
+  },
 
 // -------------- PLUSHIES------------
 
