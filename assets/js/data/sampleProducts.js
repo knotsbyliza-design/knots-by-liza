@@ -1476,7 +1476,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-flw-008",
     sku: "KBL-FLW-008",
     name: "Single Tulip",
-    price: 300,
+    price: 400,
     category: "flowers",
     description: "Available in any color — message us your preference.",
     images: ["/assets/js/data/images/tulip.png"],
@@ -1487,9 +1487,23 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
- {
+  {
     id: "kbl-flw-009",
     sku: "KBL-FLW-009",
+    name: "Single Tulip Style 2",
+    price: 300,
+    category: "flowers",
+    description: "Available in any color — message us your preference.",
+    images: ["/assets/js/data/images/tulip.jpe"],
+    availability: "accepting",
+    processingTime: "2-3 business days",
+    featured: false,
+    isNew: false,
+    variations: {},
+  },
+ {
+    id: "kbl-flw-010",
+    sku: "KBL-FLW-010",
     name: "Petals & Treats Bouquet",
     price: 1000,
     category: "flowers",
