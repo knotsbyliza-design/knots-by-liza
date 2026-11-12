@@ -2264,6 +2264,58 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
+  {
+    id: "kbl-hac-042",
+    sku: "KBL-HAC-042",
+    name: "The Bold Braid Headband",
+    price: 450,
+    category: "hairaccessories",
+    description: "",
+    images: ["/assets/js/data/images/braidhead.jpe" ],
+    availability: "accepting",
+    processingTime: "3–5 business days",
+    featured: false,
+    isNew: false,
+    variations: {
+      size: [  "kids" ]
+     },
+  },
+
+
+  {
+    id: "kbl-hac-043",
+    sku: "KBL-HAC-043",
+    name: "The Bow Beanie",
+    price: 1500,
+    category: "hairaccessories",
+    description: "",
+    images: ["/assets/js/data/images/bowb.jpg" ],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      size: [  "kids" ]
+     },
+  },
+
+  {
+    id: "kbl-hac-044",
+    sku: "KBL-HAC-044",
+    name: "The Pumpkin Beanie",
+    price: 1600,
+    category: "hairaccessories",
+    description: "",
+    images: ["/assets/js/data/images/pumpkinb.jpg" ],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      size: [  "kids" ]
+     },
+  },
+
     //--------------HAND ACCESSORIES ----------
 
   {
