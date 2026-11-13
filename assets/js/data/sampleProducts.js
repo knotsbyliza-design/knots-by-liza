@@ -2472,7 +2472,7 @@ export const SAMPLE_PRODUCTS = [
     category: "tech-covers",
     description: "If you'd like a different color, message me with the color of your choice.",
     images: ["/assets/js/data/images/phonecase.jpg"],
-    availability: "accepting",
+    availability: "paused",
     processingTime: "5-7 business days",
     featured: false,
     isNew: false,
