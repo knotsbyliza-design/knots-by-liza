@@ -2482,7 +2482,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-tec-003",
     sku: "KBL-TEC-003",
     name: "Granny Square Laptop Sleeve",
-    price: 1700,
+    price: 2100,
     category: "tech-covers",
     description: "Size: 9 x 12 inches. If you'd like a different color, message me with the color of your choice.",
     images: ["/assets/js/data/images/laptopsleeve.png"],
@@ -2490,7 +2490,14 @@ export const SAMPLE_PRODUCTS = [
     processingTime: "5-7 business days",
     featured: false,
     isNew: false,
-    variations: {},
+    variations: {
+     style: [ 
+              {value: "Compact size", price: 2100},
+              {value: "Standard 13-14 inches (Unlined)", price: 2200},
+              { value: "Standard 13-14 inches (Fabric Lined)", price: 2600},
+              { value: "Large 15–16 (Fabric Lined)", price: 3000},
+      ]
+    },
   },
 
 
