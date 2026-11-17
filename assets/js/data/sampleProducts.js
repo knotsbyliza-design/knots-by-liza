@@ -1556,7 +1556,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-plu-002",
     sku: "KBL-PLU-002",
     name: "Bunny",
-    price: 3800,
+    price: 4000,
     category: "plushies",
     description: "",
     images: ["/assets/js/data/images/bunny.png"],
