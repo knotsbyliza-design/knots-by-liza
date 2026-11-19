@@ -1083,7 +1083,39 @@ export const SAMPLE_PRODUCTS = [
   },
 
 
+  {
+    id: "kbl-clo-050",
+    sku: "KBL-CLO-050",
+    name: "The Filmstrip Scarf",
+    price: 3500,
+    category: "clothing",
+    description: ``,
+    images: ["/assets/js/data/images/filmstrip.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      
+    },
+  },
 
+{
+    id: "kbl-clo-051",
+    sku: "KBL-CLO-051",
+    name: "The Sonata Scarf",
+    price: 3600,
+    category: "clothing",
+    description: ``,
+    images: ["/assets/js/data/images/sonata.jpe"],
+    availability: "accepting",
+    processingTime: "7-9 business days",
+    featured: false,
+    isNew: true,
+    variations: {
+      
+    },
+  },
 
 // --------------- BAGS------------------------ 
 
