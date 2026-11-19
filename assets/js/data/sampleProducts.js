@@ -1512,7 +1512,7 @@ export const SAMPLE_PRODUCTS = [
     price: 600,
     category: "flowers",
     description: "Available in any color — message us your preference.",
-    images: ["/assets/js/data/images/tulip.png"],
+    images: ["/assets/js/data/images/tulip.jpg"],
     availability: "accepting",
     processingTime: "2-3 business days",
     featured: false,
