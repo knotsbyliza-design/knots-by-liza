@@ -2568,7 +2568,7 @@ export const SAMPLE_PRODUCTS = [
     id: "kbl-dec-003",
     sku: "KBL-DEC-003",
     name: "Mushroom Trinket",
-    price: 600,
+    price: 950,
     category: "home-decor",
     description: "If you'd like a different color, message me with the color of your choice.",
     images: ["/assets/js/data/images/mushroom1.png", "/assets/js/data/images/mushroom.png"],
@@ -2593,8 +2593,8 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       style: [
-        { value: "Without Name", price: 1600 },
-        { value: "With Custom Name", price: 1700 },
+        { value: "Without Name", price: 1650 },
+        { value: "With Custom Name", price: 1800 },
       ],
       colour: ["Classic Red Rose", "Soft Pink Rose", { value: "Custom", custom: true }],
     },
@@ -2613,8 +2613,8 @@ export const SAMPLE_PRODUCTS = [
     isNew: false,
     variations: {
       style: [
-        { value: "Without Name", price: 1500 },
-        { value: "With Custom Name", price: 1600 },
+        { value: "Without Name", price: 1550 },
+        { value: "With Custom Name", price: 1700 },
       ],
       colour: ["Soft Pink", "Peach", "Sunshine Yellow", "Lavender", { value: "Custom", custom: true }],
     },
