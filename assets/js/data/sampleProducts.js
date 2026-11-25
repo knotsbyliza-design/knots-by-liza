@@ -1643,7 +1643,20 @@ export const SAMPLE_PRODUCTS = [
     variations: {},
   },
 
-
+{
+    id: "kbl-plu-006",
+    sku: "KBL-PLU-006",
+    name: "Rosie the Bunny",
+    price: 4000,
+    category: "plushies",
+    description: "",
+    images: ["/assets/js/data/images/rossie.jpg"],
+    availability: "accepting",
+    processingTime: "5-7 business days",
+    featured: false,
+    isNew: true,
+    variations: {},
+  },
 
   // -----------------HAIR ACCESSORIES------------ 
 
